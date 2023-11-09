@@ -21,7 +21,7 @@ const Background = ({children}) => {
                 dashboardOn : true,
                 dashboardButtonOn : 'dashboard-blue-on dashboard-button',
                 dashboardButtonOff : 'dashboard-blue-off dashboard-button',
-                dashboardStyle : "activity-dashboard",
+                dashboardStyle : "activity-dashboard animate__animated animate__fadeInDown",
                 dashboardStyleOpen : "activity-dashboard-on",
                 dItem : "d-item-blue",
                 exact : "/activities"
@@ -40,8 +40,6 @@ const Background = ({children}) => {
                     href: '/activities/schoolPrograms'
                 }
             ])
-            
-
         }
         else if (path == "/about" || path == "/about/advisors" || path == "/about/executiveCommittee" || path == "/about/contactUs") {
             setData({
@@ -49,7 +47,7 @@ const Background = ({children}) => {
                 dashboardOn : true,
                 dashboardButtonOn : 'dashboard-green-on dashboard-button',
                 dashboardButtonOff : 'dashboard-green-off  dashboard-button',
-                dashboardStyle : "about-dashboard",
+                dashboardStyle : "about-dashboard animate__animated animate__fadeInDownBig",
                 dashboardStyleOpen : "about-dashboard-on",
                 dItem : "d-item-green",
                 exact : "/about"
@@ -79,8 +77,8 @@ const Background = ({children}) => {
                 dashboardOn : true,
                 dashboardButtonOn : 'dashboard-red-on dashboard-button',
                 dashboardButtonOff : 'dashboard-red-off  dashboard-button',
-                dashboardStyle : "blogs-dashboard ",
-                dashboardStyleOpen : "blogs-dashboard-on",
+                dashboardStyle : "blogs-dashboard  animate__animated animate__fadeInUpBig",
+                dashboardStyleOpen : "blogs-dashboard-on ",
                 dItem:'d-item-red',
                 exact : "/blogs"
             })
@@ -113,14 +111,16 @@ const Background = ({children}) => {
                 background:"black",
                 dashboardOn : false
             })
+          
         }
+
     },[path])
-        
+   
 
     return (
         <div className={background}>
             <button onClick={() => setVisible(!visible)} className={`${visible ? dashboardButtonOn : dashboardButtonOff} btn-visibility`}><svg className='mx-auto' xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" strokeWidth="2" viewBox="0 0 24 24" color="#ffffff"><path stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M3 5h18M3 12h18M3 19h18"></path></svg></button>
-            <div className={ dashboardOn ? 'dashboard' : 'noDashboard'}>
+            <div className={`${ dashboardOn ? 'dashboard'  : 'noDashboard'}`} >
             <ul className={visible ? dashboardStyle : dashboardStyleOpen}>
                     {
                         dashboard.map(({title, href}) => 
@@ -136,7 +136,7 @@ const Background = ({children}) => {
                     }
                 </ul>
             </div>
-            <div className={data.dashboardOn ? 'lg:ml-72 lg:pt-20' : ''}>
+            <div className={dashboardOn ? 'lg:ml-72 lg:pt-20' : ''}>
                 {children}
             </div>
         </div>

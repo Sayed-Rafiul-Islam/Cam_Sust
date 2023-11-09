@@ -53,7 +53,7 @@ const Activities = () => {
     ]
 
     return (
-        <div className='activities lg:pt-0 pt-12'>
+        <div className='activities lg:pt-0 pt-12 animate__animated animate__fadeInLeft'>
             <div>
                 <h1 className='text-center text-5xl text-white font-bold'>CAM TALKS</h1> 
                 <p className='text-white w-5/6 font-thin mx-auto mt-6 pb-8 border-b-2 text-justify'>
