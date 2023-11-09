@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.body-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
+@keyframes zoom {
+  0%   {transform: scale(1,1);}
+  50%  {transform: scale(1.1,1.1);}
+  100% {transform: scale(1,1);}
+}
+
+.bg {
+  position: fixed;
+  z-index: -1;
+  animation-name: zoom;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+
+}
+
+.area{
+  position: relative;
+  overflow-x: hidden;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+}
+.logo {
+  width: 7%;
+}
+
+.navItem {
+  transform: scale(1);
+  color: white;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+}
+
+.navItem:hover {
+  transform: scale(1.1);
+  border-bottom: 3px solid orange;
+  color: orange;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+}
+.wid-90{
+  width: 90%;
+}
+.bg-b{
+  display: none;
+}
+.footer {
+  position: relative;
+  z-index: 4;
+}
+
+
+
+/* --------------------------------------------------------------------------- */
+
+@media (max-width: 576px) {
+  @keyframes zoom {
+    0%   {transform: scale(1,1);}
+    50%  {transform: scale(1.1,1.1);}
+    100% {transform: scale(1,1);}
+  }
+  
+  .bg-s{
+    display: none;
+  }
+  .bg-b{
+    display: block;
+  }
+  .bg {
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    animation-name: zoom;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  
+  }
+  
+  .area{
+    position: relative;
+    overflow-x: hidden;
+  }
+  .menu {
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+  }
+  .logo {
+    display: none;
+  }
+  .activity-dashboard-on {
+    background-color: rgb(2, 0, 105);
+    padding-block: 50%;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    left: 10px;
+    transition-duration: .5s;
+    border-left: 10px solid rgb(2, 0, 105);
+    transition-timing-function: linear;
+}
+
+}

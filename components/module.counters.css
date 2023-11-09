@@ -1,0 +1,30 @@
+.count{
+    font-size: 100px;
+    color: orange;
+    font-weight: 600;
+    text-shadow: 10px 10px 10px black;
+}
+
+.count-name{
+    font-size: 25px;
+    color: azure;
+    font-weight: 600;
+    text-shadow: 10px 10px 10px black;
+}
+
+
+@media (max-width: 576px) {
+    .count{
+        font-size: 40px;
+        color: orange;
+        font-weight: 600;
+        text-shadow: 10px 10px 10px black;
+    }
+    
+    .count-name{
+        font-size: 20px;
+        color: azure;
+        font-weight: 600;
+        text-shadow: 10px 10px 10px black;
+    }
+  }

@@ -1,0 +1,16 @@
+.card{
+    transform: scale(1);
+    background: transparent;
+    border: none;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+.card:hover {
+    box-shadow: 5px 5px 5px;
+    transform: scale(1.05);
+    background: rgb(48, 48, 48);
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}

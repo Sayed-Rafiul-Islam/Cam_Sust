@@ -1,0 +1,390 @@
+.dashboard {
+    width: 320px;
+    position: fixed;
+
+}
+.noDashboard {
+    display: none;
+}
+.cyan{
+    background-color: rgba(3, 211, 197, 0.532);
+    transition-duration: .5s;
+}
+.green{
+    background-color: rgba(22, 118, 7, 0.504);
+    transition-duration: .5s;
+}
+.about-dashboard {
+    padding-top: 100px;
+    background-color: rgb(3, 56, 3);
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.blue{
+    background-color: rgba(34, 0, 255, 0.414);
+    transition-duration: .5s;
+}
+.activity-dashboard {
+    padding-top: 100px;
+    background-color: rgb(2, 0, 105);
+    height: 100vh;
+    overflow-x: hidden;
+}
+.d-item-green {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-block: 5px;
+    margin-block: 10px;
+    padding-left: 40px;
+}
+.d-item-green:hover {
+    background-image: linear-gradient(to right, rgba(0, 136, 14, 0.873), transparent);
+    transform: scale(1.05);
+    transition-duration: .2s;
+    border-left: 15px solid orange;
+    transition-timing-function: linear;
+    font-weight: bold;
+    padding-left: 30px;
+}
+.d-item-blue {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: large;
+    padding-block: 5px;
+    margin-block: 10px;
+    padding-left: 50px;
+}
+.d-item-blue:hover {
+    background-image: linear-gradient(to right, rgb(1, 1, 162), transparent);
+    transform: scale(1.05);
+    transition-duration: .2s;
+    border-left: 15px solid orange;
+    transition-timing-function: linear;
+    font-weight: bold;
+}
+.purple{
+    background-color: rgba(153, 0, 255, 0.419);
+    transition-duration: .5s;
+}
+.red{
+    background-color: rgba(255, 0, 0, 0.405);
+    transition-duration: .5s;
+    padding-bottom: 20px;
+}
+.blogs-dashboard {
+    padding-top: 100px;
+    background-color: rgb(129, 10, 10);
+    height: 100vh;
+    overflow-x: hidden;
+}
+.d-item-red {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-block: 5px;
+    margin-block: 10px;
+    padding-left: 40px;
+}
+.d-item-red:hover {
+    background-image: linear-gradient(to right, rgb(178, 9, 9), transparent);
+    transform: scale(1.05);
+    transition-duration: .2s;
+    border-left: 15px solid orange;
+    transition-timing-function: linear;
+    font-weight: bold;
+    padding-left: 30px;
+}
+.black{
+    background-color: rgba(13, 13, 13, 0);
+    transition-duration: .5s;
+}
+.activated {
+    color: orange;
+    font-weight: bold;
+    transition-duration: .5s;
+    transform: scale(1.1);
+    border-bottom: 20px solid orange;
+}
+
+.dashboard-button {
+    display: none;
+}
+
+.btn-visibility {
+    display: none;
+}
+
+
+
+/* --------------------------------------------------------------------------- */
+
+@media (max-width: 576px) { 
+    .btn-visibility {
+        display: block;
+        position: absolute;
+    } 
+    .noDashboard {
+        display: none;
+    }
+.dashboard{
+    display: block;
+        position: fixed;
+        left: 390px;
+        z-index: 2;
+   }
+.dashboard-button {
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    display: block;
+    top: 45%;
+}
+.activated {
+    color: orange;
+    font-weight: bold;
+    transition-duration: .5s;
+    transform: scale(1.1);
+    border-bottom: 20px solid orange;
+    /* background-image: linear-gradient(to top, orange, transparent,orange); */
+}
+
+
+.blue{
+    background-color: rgba(34, 0, 255, 0.414);
+    transition-duration: .5s;
+}
+.dashboard-blue-on {
+    background: rgb(2, 0, 105);
+    box-shadow: 0 6px 5px -4px black;
+    width: 10%;
+    height: 10%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    right: 10px;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+}
+.dashboard-blue-off{
+    position: fixed;
+    top: 0;
+    right: 280px;
+    background: rgb(4, 3, 83);
+    width: 10%;
+    height: 100%;    
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+}
+.activity-dashboard{
+    background-color: rgb(2, 0, 105);
+    padding-block: 50%;
+    height: 100%;
+    width: 80%;
+    overflow-x: hidden;
+    position: fixed;
+    left: 380px;
+    transition-duration: .5s;
+    border-left: 10px solid rgb(2, 0, 105);
+    transition-timing-function: linear;
+}
+.activity-dashboard-on {
+    background-color: rgb(2, 0, 105);
+    padding-block: 50%;
+    height: 100vh;
+    width: 80%;
+    overflow-x: hidden;
+    position: fixed;
+    left: 80px;
+    transition-duration: .5s;
+    border-left: 10px solid rgb(2, 0, 105);
+    transition-timing-function: linear;
+}
+
+.d-item-blue {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    color: white;
+    font-size: large;
+    padding-block: 5px;
+    margin-block: 10px;
+    padding-right: 50px;
+}
+.d-item-blue:hover {
+    background-image: linear-gradient(to right, rgb(1, 1, 162), transparent);
+    transform: scale(1.05);
+    transition-duration: .2s;
+    border-right: 25px solid orange;
+    transition-timing-function: linear;
+    font-weight: bold;
+}
+
+.red{
+    background-color: rgba(255, 0, 0, 0.405);
+    transition-duration: .5s;
+    padding-bottom: 20px;
+}
+.dashboard-red-on {
+    background: rgb(129, 10, 10);
+    box-shadow: 0 6px 5px -4px black;
+    width: 10%;
+    height: 10%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    right: 10px;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+}
+.dashboard-red-off{
+    position: fixed;
+    top: 0;
+    right: 280px;
+    background: rgb(113, 6, 6);
+    width: 10%;
+    height: 100%;    
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+}
+.blogs-dashboard {
+    background-color: rgb(129, 10, 10);
+    padding-block: 50%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    right: 10px;
+    border-left: 10px solid rgb(129, 10, 10);
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+.blogs-dashboard-on {
+    background-color: rgb(129, 10, 10);
+    padding-block: 50%;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    transition-duration: .5s;
+    right: 310px;
+    border-left: 10px solid rgb(129, 10, 10);
+    transition-timing-function: linear;
+}
+.d-item-red {
+    font-size: large;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    color: white;
+    padding-block: 5px;
+    margin-block: 10px;
+    padding-right: 40px;
+}
+.d-item-red:hover {
+    background-image: linear-gradient(to right, rgb(178, 9, 9), transparent);
+    transform: scale(1.05);
+    transition-duration: .2s;
+    border-right: 15px solid orange;
+    transition-timing-function: linear;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.cyan{
+    background-color: rgba(3, 211, 197, 0.532);
+    transition-duration: .5s;
+}
+
+.purple{
+    background-color: rgba(153, 0, 255, 0.419);
+    transition-duration: .5s;
+}
+
+.green{
+    background-color: rgba(22, 118, 7, 0.504);
+    transition-duration: .5s;
+}.dashboard-green-on {
+    background: rgb(3, 56, 3);
+    box-shadow: 0 6px 5px -4px black;
+    width: 10%;
+    height: 10%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    right: 10px;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+}
+.dashboard-green-off{
+    position: fixed;
+    top: 0;
+    right: 300px;
+    background: rgb(8, 46, 2);
+    width: 10%;
+    height: 100%;   
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+}
+.about-dashboard {
+    padding-block: 50%;
+    height: 100vh;
+    background-color: rgb(3, 56, 3);
+    overflow-x: hidden;
+    position: relative;
+    right: 10px;
+    transition-duration: .5s;
+    border-left: 10px solid rgb(3, 56, 3);
+    transition-timing-function: linear;
+}
+.about-dashboard-on {
+    background-color: rgb(3, 56, 3);
+    padding-block: 50%;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    right: 310px;
+    transition-duration: .5s;
+    border-left: 10px solid rgb(3, 56, 3);
+    transition-timing-function: linear;
+}
+.d-item-green {
+    font-size: large;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    color: white;
+    padding-block: 5px;
+    margin-block: 10px;
+    padding-right: 40px;
+}
+.d-item-green:hover {
+    background-image: linear-gradient(to right, rgba(0, 136, 14, 0.873), transparent);
+    transform: scale(1.05);
+    transition-duration: .2s;
+    border-right: 15px solid orange;
+    transition-timing-function: linear;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.black{
+    background-color: rgba(13, 13, 13, 0);
+    transition-duration: .5s;
+}
+
+  
+  }

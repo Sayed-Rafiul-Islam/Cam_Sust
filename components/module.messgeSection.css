@@ -1,0 +1,81 @@
+.header-msg{
+    color: black;
+    text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px orange;
+}
+
+.card-2{
+    /* border: 1px solid orange; */
+    border-radius: 5px;
+    background-color: rgba(255, 166, 0, 0.067);
+    padding: 25px;
+}
+
+@keyframes astronut {
+    0%   { top: -6.5vh;}
+    50%  { top: 6.5vh;}
+    100%  { top: -6.5vh;}
+
+  }
+
+.astronut {
+    position: relative;
+    animation-name: astronut;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.btn-1{
+    margin-right: 2%;
+    padding: 5px 1px;
+    width: 50%;
+    color: rgb(9, 174, 9);
+    border: 2px solid rgb(9, 174, 9);
+    border-radius: 4px;
+    transition-duration: .5s;
+
+}
+.btn-2{
+    padding: 5px 15px;
+    width: 50%;
+    color: orange;
+    border: 2px solid orange;
+    background: transparent;
+    border-radius: 4px;
+    transition-duration:.5s;
+}
+
+.btn-1:hover {
+    color: white;
+    background-color: rgb(9, 174, 9) ;
+    transition-duration: .5s;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px green;
+    transition-timing-function: linear;
+}
+.btn-2:hover {
+    color: white;
+    background-color: orange ;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px orange;
+}
+
+@media (max-width: 576px) {
+    .header-msg{
+        color: black;
+        text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px orange;
+    }
+    
+    .card-2{
+        border-radius: 5px;
+        background-color: rgba(255, 166, 0, 0.067);
+        padding: 25px;
+    }
+    
+    @keyframes astronut {
+        0%   { left: -30px;}
+        50%  { left: 180px; transform: rotate(180deg);}
+        100%  { left: -30px; transform: rotate(360deg);}
+    
+      }
+  }
