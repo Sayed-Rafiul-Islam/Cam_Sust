@@ -59,7 +59,7 @@ const CamLibrary = async () => {
                 </div>
                 
                 <div className='pb-10'>
-                    <h1  className='text-5xl lg:pt-20 pt-10 text-center font-bold text-white'>বইয়ের তালিকা</h1>
+                    <h1  className='text-3xl lg:pt-20 pt-10 text-center font-bold text-white'>বইয়ের তালিকা</h1>
                     <table className='mt-5'>
                         <tr>
                             <th>সি.ন.</th>

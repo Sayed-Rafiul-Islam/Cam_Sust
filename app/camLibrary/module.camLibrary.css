@@ -52,16 +52,16 @@ td {
     
     table{
         margin-inline: auto;
-        width: 90%;
+        width: 95%;
     }
     th {
         color: orange;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 10px;
     }
     td {
         color: white;
-        font-size: 12px;
+        font-size: 10px;
     }
     
 }
