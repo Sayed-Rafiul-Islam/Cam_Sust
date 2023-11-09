@@ -49,7 +49,14 @@ export const getBooks = async ()  => {
         useCdn : true
     })  
 
-    const books = await client.fetch(`*[_type == "books"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+    const books = await client.fetch(`*[_type == "books"]{
+        _id,
+        serial,
+        title,
+        author,
+        publisher,
+        _createdAt
+    }`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
     return books 
 }

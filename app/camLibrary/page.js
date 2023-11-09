@@ -68,9 +68,9 @@ const CamLibrary = async () => {
                             <th>প্রকাশনী</th>
                         </tr>
                         {
-                            books.map(({_id,title,author,serial,publisher}) => 
-                                <tr classeName='' key={_id}>
-                                    <td className=''>{serial}</td>
+                            books.map(({_id,title,author,serial,publisher}, index) => 
+                                <tr key={_id}>
+                                    <td>{index + 1}</td>
                                     <td>{title}</td>
                                     <td>{author}</td>
                                     <td>{publisher}</td>
