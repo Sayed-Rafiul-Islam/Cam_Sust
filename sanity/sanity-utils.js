@@ -38,3 +38,18 @@ export const getBlog = async (slug)  => {
 
     return blogs 
 }
+// --------------------------------------------------------------------------------------------
+
+export const getBooks = async ()  => {
+
+    const client = createClient({
+        projectId : "f89xy3cs",
+        dataset : "production",
+        apiVersion : "2023-11-05",
+        useCdn : true
+    })  
+
+    const books = await client.fetch(`*[_type == "books"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+
+    return books 
+}

@@ -1,0 +1,67 @@
+.camLibrary {
+    width: 90%;
+}
+.camLibrary div div {
+    border-bottom: 2px solid rgb(9, 212, 212);
+    border-right: 2px solid rgb(9, 212, 212);
+    background: #073f4270;
+    transition-duration: .4s;
+}
+.camLibrary div div:hover {
+    border-top: 2px solid rgb(9, 212, 212);
+    border-left: 2px solid rgb(9, 212, 212);
+    border-bottom: none;
+    border-right: none;
+    transition-duration: .4s;
+    transition-timing-function: linear;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px black;
+    background-image: linear-gradient(to top, rgba(0, 7, 7, 0.714), transparent);
+}
+.camLibrary li {
+    color: rgb(233, 231, 231);
+}
+.orange {
+    color: orange;
+}
+
+table, th, td {
+    background: #073f4270;
+    text-align: center;
+    border: 2px solid #05a193;
+}
+
+table{
+    margin-inline: auto;
+    width: 80%;
+}
+th {
+    color: orange;
+    font-weight: bold;
+}
+td {
+    color: white;
+}
+
+@media (max-width: 576px) {
+    table, th, td {
+        background: #073f4270;
+        text-align: center;
+        border: 2px solid #05a193;
+    }
+    
+    table{
+        margin-inline: auto;
+        width: 90%;
+    }
+    th {
+        color: orange;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    td {
+        color: white;
+        font-size: 12px;
+    }
+    
+}
