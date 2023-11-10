@@ -1,0 +1,29 @@
+.product-card{
+    height: 400px;
+    background: #13012050;
+    overflow: hidden;
+    border-top: 2px solid rgb(217, 0, 255);
+    border-bottom: 2px solid rgb(217, 0, 255);
+    padding-bottom: 20px;
+    transition-duration: .4s;
+}
+.product-card:hover{
+    height: 400px;
+    background-image: linear-gradient(to top left, #130120eb, transparent, transparent); 
+    overflow: hidden;
+    border-top: 2px solid rgb(217, 0, 255);
+    border-bottom: 2px solid rgb(217, 0, 255);
+    padding-bottom: 20px;
+    transition-duration: .4s;
+    transition-timing-function: linear;
+    transform: scale(1.04);
+    box-shadow: 15px 15px 30px black;
+}
+
+.product-card img {
+    transition-duration: .4s;
+}
+.product-card:hover img {
+    transition-duration: .4s;
+    transform: scale(1.2);
+}
