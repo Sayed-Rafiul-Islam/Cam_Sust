@@ -29,7 +29,7 @@ const products = {
             of : [{type : "string"}]
         },
         {
-            name : "sized",
+            name : "sizes",
             type : "array",
             title : "Sizes",
             of : [{type : "string"}]
