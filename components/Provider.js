@@ -1,6 +1,6 @@
 "use client"
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from "react-toastify"
+// import { ToastContainer } from "react-toastify"
 
 
 
@@ -11,7 +11,7 @@ export default function Provider({children}) {
     <div>
        
       {children}
-      <ToastContainer
+      {/* <ToastContainer
       position="top-right"
       autoClose={5000}
       hideProgressBar={false}
@@ -22,7 +22,7 @@ export default function Provider({children}) {
       draggable
       pauseOnHover
       theme="dark"
-      />
+      /> */}
     </div>
   )
 }
