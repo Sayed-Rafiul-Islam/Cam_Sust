@@ -4,7 +4,6 @@ import PortableText from 'react-portable-text'
 import './module.product.css'
 import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
-import { Link } from 'lucide-react'
 import cartData from '@/utils/cartData'
 
 
@@ -26,13 +25,7 @@ export default function Product({product}) {
     const [selectedSize, setSelectedSize] = useState('')
     const {name, images, currency, slug,colors,sizes, categories, price, _id, details, sku} = product
     const [selectedImage, setSelectedImage] = useState(0)
-    // const [items,setItems] = useState([])
-    // localStorage.setItem("items", JSON.stringify(items))
-   
-    // const data =  localStorage.getItem("item") === null ? true : false
-  //  console.log(data)
-    
-    // console.log(items)
+
     const cartHandler = () => {
       if (selectedSize === '') {
         toast.error("Please select a size first !")
@@ -47,7 +40,7 @@ export default function Product({product}) {
 
       cartData(item)
       toast.success(`${name} of ${selectedSize} has been added to the Cart`)
-          // addItem(item)
+
           
       }
   }

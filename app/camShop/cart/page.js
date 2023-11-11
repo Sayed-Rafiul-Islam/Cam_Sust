@@ -6,11 +6,6 @@ import './module.cart.css'
 
 export default function Cart() {
 
-
-  // const {cartDetails} = useShoppingCart()
-  // console.log(cartDetails)
-  // const cartItems = Object.entries(cartDetails).map(([_,product]) => product)
-
   return (
     <div className='cart h-screen w-screen'>
       <div className='cart-bg w-screen h-full'>
