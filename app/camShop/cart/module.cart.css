@@ -5,3 +5,45 @@
     z-index: -1;
     opacity: .7;
 }
+
+.cart {
+    width: 95%;
+}
+.table {
+    width: 70%;
+}
+.checkout-box {
+    width: 30%;
+}
+.avatar{
+    border: 2px solid rgb(255, 140, 0);
+    padding-bottom: 20px;
+}
+.row {
+    border-bottom: 1px solid rgba(255, 166, 0, 0.414);
+}
+.cart-btn{
+    border-radius: 20px;
+    border: 1px solid rgba(255, 0, 0, 0.418);
+    color: rgba(255, 0, 0, 0.726);
+    transition-duration: .3s;
+}
+.cart-btn:hover{
+    border-radius: 20px;
+    background-image: linear-gradient(to right,rgba(255, 0, 0, 0.418), transparent) ;
+    color: white;
+    transition-duration: .3s;
+    transform: scale(1.05);
+}
+.modal-on {
+    background: black;
+    width: 1000px;
+    height: 350px;
+    color: white;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+}
+.modal-off {
+    display: none;
+}
