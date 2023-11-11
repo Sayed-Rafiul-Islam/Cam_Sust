@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import PortableText from 'react-portable-text'
 import './module.product.css'
-import { useShoppingCart } from 'use-shopping-cart'
 import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
 
