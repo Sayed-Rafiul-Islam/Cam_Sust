@@ -67,7 +67,7 @@ export default function Cart() {
  
 
   return (
-    <div className=' h-screen w-screen'>
+    <div className='relative h-screen w-screen'>
       <div className={modal ? 'modal-off' : 'modal-on'}>
               <h3>Are you sure?</h3>
               <div className='text-white'>
@@ -79,9 +79,9 @@ export default function Cart() {
            
       </div>
       <h1 className='text-2xl text-white'></h1>
-      <div class="mt-24 overflow-hidden cart mx-auto flex">
-       
-       <table class="table text-center text-white">
+      <div className="mt-24 overflow-hidden cart mx-auto flex lg:flex-row flex-col lg:pb-0 pb-10">
+       <div className='table-wrapper'>
+       <table className="table text-center text-white">
           <thead>
             <tr>
               <th>Product No</th>
@@ -101,8 +101,8 @@ export default function Cart() {
             <tr key={_id} className='row w-full'>
             <td>{index + 1}</td>
               <td>
-                <div class="flex justify-center">
-                    <div class="w-12 h-12 avatar rounded-full">
+                <div className="flex justify-center">
+                    <div className="w-12 h-12 avatar rounded-full">
                       <img className='rounded-full' src={urlFor(image).url()} alt="Avatar Tailwind CSS Component" />
                     </div>
                 </div>
@@ -124,6 +124,7 @@ export default function Cart() {
         </tbody>
 
         </table>
+        </div>
        
         <div className='checkout-box text-white'>
               <h2 className='text-2xl mt-5 mb-10 text-white font-bold text-center'>Total Amount</h2>

@@ -49,10 +49,10 @@ export default function Product({product}) {
   }
 
   return (
-    <div className='product mt-24 mx-auto flex items-center'>
-        <div className='w-1/2'>
+    <div className='product lg:mt-24 mt-16 mx-auto flex lg:flex-row flex-col items-center'>
+        <div className='lg:w-1/2'>
           <img className='w-2/3 mx-auto rounded-xl' src={urlFor(images[selectedImage]).url()} alt='Product Showcasing Image'  />
-              <div className='flex mt-4 ml-28'>
+              <div className='flex lg:mt-4 mt-2 ml-14 lg:ml-28'>
               { 
                 images.map((image,index)=>(
                 <div 
@@ -66,10 +66,10 @@ export default function Product({product}) {
               }
             </div>
         </div>
-      <div className='text-white pr-20 w-1/2'>
+      <div className='text-white lg:pr-20 w-5/6 mt-6 lg:mt-0 text-center lg:text-left lg:w-1/2 lg:pb-0 pb-12'>
         <h1 className='mb-4 text-3xl font-bold'>{name}</h1>
         <p className='text-orange-400 font-bold'>Description :</p>
-        <PortableText className='text-sm'
+        <PortableText className='text-sm text-justify'
         projectId='f89xy3cs'
         dataset='production'
         content={details}

@@ -9,6 +9,7 @@
     border-radius: 5px;
     padding: 5px 15px;
     margin-right: 10px;
+    margin-bottom: 10px;
     transition-duration: .5s;
 }
 
@@ -81,4 +82,20 @@
 
 .product-img {
     width: 100px;
+}
+
+@media (max-width: 576px) {
+    .product-img {
+        width: 50px;
+    }
+    .addToCart-btn{
+        margin-top: 30px;
+        position: relative;
+        color: orange;
+        border: 1px solid orange;
+        background-image: none;
+        border-radius: 5px;
+        padding: 10px 80px;
+        transition-duration: .5s;
+    }
 }
