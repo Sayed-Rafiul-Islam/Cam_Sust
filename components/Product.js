@@ -5,6 +5,7 @@ import './module.product.css'
 import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
 import cartData from '@/utils/cartData'
+import Link from 'next/link'
 
 
 
@@ -35,7 +36,9 @@ export default function Product({product}) {
           _id : _id,
           name : name,
           size : selectedSize,
-          price : price     
+          price : price,
+          quantity : 1,
+          image : images[0]     
       }
 
       cartData(item)
@@ -98,7 +101,7 @@ export default function Product({product}) {
         }
         <br />
         <button onClick={() => cartHandler()} className='addToCart-btn'>Add to Cart</button>
-        <a className='text-white text-xl bg-gray-500' href='./cart' >Go to Cart</a>
+        
       </div>
     </div>
   )

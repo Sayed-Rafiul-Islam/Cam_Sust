@@ -31,6 +31,7 @@ export default async function RootLayout({ children}) {
               {/* Header */}
           {/* -------------------------------------------------------- */}
               <div className='menu'>
+              
                 <Navbar>
                 </Navbar>
               </div>    

@@ -23,8 +23,28 @@
   .menu-button {
     display: none;
   }
+  .cart-ico {
+    color: white;
+    transition-duration: .5s;
+  }
+  .cart-ico:hover {
+    color: orange;
+    transition-duration: .5s;
+    transform: scale(1.1);
+  }
 
   @media (max-width: 576px) {
+
+    .cart-ico {
+      color: white;
+      transition-duration: .5s;
+    }
+    .cart-ico:hover {
+      color: orange;
+      transition-duration: .5s;
+      transform: scale(1.1);
+    }
+    
     .navbar{
         background: rgb(0, 0, 0);
         width: 100vw;
@@ -50,20 +70,33 @@
       .menu-2{
         transition-duration: .5s;
         width: 100%;
-        top: 325px;
+        top: 440px;
         padding-block: 20px;
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
         background-color: black;
         z-index: 1;
       }
+      .cart-ico-1 {
+          display: none;
+      }
+      .cart-ico-2 {
+        position: relative;
+        color: white;
+        display: block;
+        margin-top: 20px;
+        margin-left: 182px;
+          
+      }
       .menubar-1{
         position: absolute;
         top: -350px;
         transition-duration: .5s;
+        
       }
       .menubar-2{
         top: 0px;
         background: black;
+        height: 450px;
       }
   }
