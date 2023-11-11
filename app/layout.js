@@ -55,7 +55,18 @@ export default async function RootLayout({ children}) {
                       <h1 className='text-center text-xl text-white'>Footer</h1>
               </footer>
 
-              <ToastContainer />
+              <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+              />
 
 
         </div> 
