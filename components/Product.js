@@ -4,7 +4,9 @@ import PortableText from 'react-portable-text'
 import './module.product.css'
 import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
-import { useCart } from "cart";
+import { Link } from 'lucide-react'
+import cartData from '@/utils/cartData'
+
 
 
 const builder = imageUrlBuilder({
@@ -24,23 +26,29 @@ export default function Product({product}) {
     const [selectedSize, setSelectedSize] = useState('')
     const {name, images, currency, slug,colors,sizes, categories, price, _id, details, sku} = product
     const [selectedImage, setSelectedImage] = useState(0)
+    // const [items,setItems] = useState([])
+    // localStorage.setItem("items", JSON.stringify(items))
+   
+    // const data =  localStorage.getItem("item") === null ? true : false
+  //  console.log(data)
     
-    
+    // console.log(items)
     const cartHandler = () => {
       if (selectedSize === '') {
         toast.error("Please select a size first !")
       }
       else {
         const item ={
-          ...product,
-          product_data : {
-              size : selectedSize
-          }  
-          
+          _id : _id,
+          name : name,
+          size : selectedSize,
+          price : price     
       }
-      console.log(item)
+
+      cartData(item)
+      toast.success(`${name} of ${selectedSize} has been added to the Cart`)
           // addItem(item)
-          // toast.success(`${name} of ${selectedSize} has been added to the Cart`)
+          
       }
   }
 
@@ -97,6 +105,7 @@ export default function Product({product}) {
         }
         <br />
         <button onClick={() => cartHandler()} className='addToCart-btn'>Add to Cart</button>
+        <a className='text-white text-xl bg-gray-500' href='./cart' >Go to Cart</a>
       </div>
     </div>
   )
