@@ -19,12 +19,16 @@ function urlFor(source) {
 export default function Cart() {
 
   const [cartItems,setCartItems] = useState([])
+  let [costs,setCosts] = useState(0)
+  let [negCosts,setNegCosts] = useState(0)
   const [tempCart,setTempCart] = useState([])
   const [modal,setModal] = useState(true)
 
 
   const handleCartItem = (_id,size) => {
         const newCart = cartItems.filter(cartItem => cartItem._id !== _id || cartItem.size !==size)
+        const thatItem = cartItems.filter(cartItem => cartItem._id === _id && cartItem.size ===size)
+        setNegCosts(thatItem[0].price)
         setTempCart(newCart)
         setModal(false);
   }
@@ -33,6 +37,8 @@ export default function Cart() {
     if(confirm) {
       setCartItems(tempCart)
       localStorage.setItem("cartItems", JSON.stringify(tempCart))
+      setCosts(costs-negCosts)
+      localStorage.setItem("costs", JSON.stringify(costs-negCosts))
       setModal(true)
     }
     else {
@@ -47,8 +53,11 @@ export default function Cart() {
    useEffect(() => {
     if (typeof window !== 'undefined') {
       const data = JSON.parse(localStorage.getItem('cartItems'))
+      const cost = JSON.parse(localStorage.getItem('costs'))
       if (data) {
           setCartItems(data)
+          setCosts(cost)
+          
       }
       else {
           setCartItems(data)
@@ -70,8 +79,9 @@ export default function Cart() {
            
       </div>
       <h1 className='text-2xl text-white'></h1>
-      <div class="mt-24 cart mx-auto flex">
-        <table class="table text-center text-white">
+      <div class="mt-24 overflow-hidden cart mx-auto flex">
+       
+       <table class="table text-center text-white">
           <thead>
             <tr>
               <th>Product No</th>
@@ -87,8 +97,8 @@ export default function Cart() {
         {
           cartItems ? 
           cartItems.map(({name,image,price,quantity,size,_id},index)=>
-          
-            <tr key={_id} className='row'>
+
+            <tr key={_id} className='row w-full'>
             <td>{index + 1}</td>
               <td>
                 <div class="flex justify-center">
@@ -106,15 +116,29 @@ export default function Cart() {
               </td>
             </tr>
           
-          )
+)
         
         :
         <h1 className='text-3xl text-red-300'>no data</h1>
         }
         </tbody>
-        </table>
-        <div className='checkout-box'>
 
+        </table>
+       
+        <div className='checkout-box text-white'>
+              <h2 className='text-2xl mt-5 mb-10 text-white font-bold text-center'>Total Amount</h2>
+              <div className='flex justify-between w-3/4 mx-auto mb-5'>
+                <p>Product Price :</p>
+                <p>{costs}</p>
+              </div>
+              <div className='flex justify-between w-3/4 mx-auto pb-5'>
+                <p>Delivery Charge :</p>
+                <p>130</p>
+              </div>
+              <div className='flex justify-between w-3/4 mx-auto pt-5 checkout-tot'>
+                <p>Total :</p>
+                <p>{costs}</p>
+              </div>
         </div>
       </div>
 

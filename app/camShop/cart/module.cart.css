@@ -8,6 +8,7 @@
 
 .cart {
     width: 95%;
+
 }
 .table {
     width: 70%;
@@ -46,4 +47,17 @@
 }
 .modal-off {
     display: none;
+}
+.checkout-box {
+    width: 25%;
+    height: 350px;
+    margin-left: 50px;
+    border-top: 1px solid rgba(255, 166, 0, 0.3);
+    border-left: 1px solid rgba(255, 166, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    padding-block: 20px;
+}
+.checkout-tot{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }

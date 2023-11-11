@@ -30,5 +30,15 @@ export default function cartData(item) {
             cartItems.push(item)
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
         }
+
+        const test1 = localStorage.getItem('costs') ? true : false
+        if (test1){
+            const costs = JSON.parse(localStorage.costs)
+            const newCosts = costs + item.price
+            localStorage.setItem("costs", JSON.stringify(newCosts))
+        }
+        else {
+            localStorage.setItem("costs", JSON.stringify(item.price))
+        }
       }  
 }
