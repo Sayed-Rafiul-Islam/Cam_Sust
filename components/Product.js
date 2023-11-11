@@ -92,8 +92,8 @@ export default function Product({product}) {
         <h2 className='my-2 text-orange-400'><b>Price :</b> <span className='text-white'>{currency} {price}</span></h2>
         <p className='my-2 text-white'><b className='text-orange-400'>Select Size : </b>{selectedSize}</p>
         {
-          sizes.map((size)=>(
-            <button className={size === selectedSize ? "selected-size" : "size-btn"} onClick={() => setSelectedSize(size)}>{size}</button>
+          sizes.map((size,index)=>(
+            <button key={index} className={size === selectedSize ? "selected-size" : "size-btn"} onClick={() => setSelectedSize(size)}>{size}</button>
           ))
         }
         <br />
