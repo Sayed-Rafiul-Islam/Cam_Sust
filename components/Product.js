@@ -4,6 +4,7 @@ import PortableText from 'react-portable-text'
 import './module.product.css'
 import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
+import { useCart } from "cart";
 
 
 const builder = imageUrlBuilder({
@@ -25,21 +26,23 @@ export default function Product({product}) {
     const [selectedImage, setSelectedImage] = useState(0)
     
     
-  //   const addToCart = () => {
-  //     if (selectedSize === '') {
-  //       toast.error("Please select a size first !")
-  //     }
-  //     else {
-  //       const item ={
-  //         ...product,
-  //         product_data : {
-  //             size : selectedSize
-  //         }  
-  //     }
-  //         addItem(item)
-  //         toast.success(`${name} of ${selectedSize} has been added to the Cart`)
-  //     }
-  // }
+    const cartHandler = () => {
+      if (selectedSize === '') {
+        toast.error("Please select a size first !")
+      }
+      else {
+        const item ={
+          ...product,
+          product_data : {
+              size : selectedSize
+          }  
+          
+      }
+      console.log(item)
+          // addItem(item)
+          // toast.success(`${name} of ${selectedSize} has been added to the Cart`)
+      }
+  }
 
   return (
     <div className='product mt-24 mx-auto flex items-center'>
@@ -93,7 +96,7 @@ export default function Product({product}) {
           ))
         }
         <br />
-        {/* <button onClick={() => addToCart()} className='addToCart-btn'>Add to Cart</button> */}
+        <button onClick={() => cartHandler()} className='addToCart-btn'>Add to Cart</button>
       </div>
     </div>
   )
