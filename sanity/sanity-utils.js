@@ -86,6 +86,22 @@ export const getProducts = async ()  => {
 
 // --------------------------------------------------------------------------------------------
 
+export const getProduct = async (slug)  => {
+
+    const client = createClient({
+        projectId : "f89xy3cs",
+        dataset : "production",
+        apiVersion : "2023-11-05",
+        useCdn : true
+    })  
+
+    const product = await client.fetch(`*[_type == "products" && slug.current == "${slug}" ][0]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+
+    return product 
+}
+
+// --------------------------------------------------------------------------------------------
+
 export const getAboutUs = async ()  => {
 
     const client = createClient({
@@ -99,9 +115,10 @@ export const getAboutUs = async ()  => {
 
     return aboutUs 
 }
+
 // --------------------------------------------------------------------------------------------
 
-export const getProduct = async (slug)  => {
+export const getAdviers = async ()  => {
 
     const client = createClient({
         projectId : "f89xy3cs",
@@ -110,7 +127,7 @@ export const getProduct = async (slug)  => {
         useCdn : true
     })  
 
-    const product = await client.fetch(`*[_type == "products" && slug.current == "${slug}" ][0]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+    const advisers = await client.fetch(`*[_type == "advisers"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
-    return product 
+    return advisers 
 }

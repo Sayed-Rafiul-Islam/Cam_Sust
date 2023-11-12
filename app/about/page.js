@@ -3,7 +3,6 @@ import './module.about.css'
 import PortableText from 'react-portable-text';
 const About = async () => {
     const aboutUs = await getAboutUs()
-    console.log(aboutUs[0])
     return (
   
         <div className='aboutUs animate__animated animate__fadeInLeft text-center text-white pb-10'>
