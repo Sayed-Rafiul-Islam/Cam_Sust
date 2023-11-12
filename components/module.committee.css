@@ -1,0 +1,83 @@
+.ec-btn{
+    background: transparent;
+    color: white;
+}
+.ec-card{
+    border-bottom: 1px solid green;
+    border-radius: 10px;
+    position: relative;
+    width: 330px;
+    height: 400px;
+    overflow: hidden;
+    transition-duration: .5s;
+    margin-block: 10px;
+}
+.ec-card:hover{
+    border-radius: 10px;
+    position: relative;
+    width: 330px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px black;
+    transition-duration: .5s;
+}
+.ec-card:hover img {
+    height: 300px;
+    width  : 300px;
+    top: -15px;
+    transform: scale(1.1);
+    position: absolute;
+    margin-left: 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 200px;
+    transition-duration: .5s
+}
+.ec-card h3 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    margin-top: 310px;
+}
+.ec-card h2 {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    padding-block: 5px;
+    padding-left: 5px;
+    padding-right: 40px;
+    margin-block: 5px;
+    background-image: linear-gradient(to right, white, transparent);
+    border-left: 5px solid green;
+    color: black;
+    left: -250px;
+    bottom: 100px;
+    transition-duration: .5s;
+}
+.ec-card:hover h2 {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    padding-block: 5px;
+    padding-left: 5px;
+    padding-right: 40px;
+    margin-block: 5px;
+    background-image: linear-gradient(to right, white, transparent);
+    border-left: 5px solid green;
+    color: black;
+    left: 20px;
+    bottom: 100px;
+    transition-duration: .5s;
+}
+.ec-card img {
+    height: 300px;
+    width  : 300px;
+    position: absolute;
+    margin-left: 14px;
+    border-radius: 100%;
+    transition-duration: .5s;
+    top: 0;
+}
+

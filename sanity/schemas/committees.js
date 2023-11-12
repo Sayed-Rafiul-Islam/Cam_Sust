@@ -9,6 +9,11 @@ const committees = {
             title : "Committee Name"
         },
         {
+            name : "electedYear",
+            type : "number",
+            title : "Elected Year"
+        },
+        {
             name : "president",
             type : "object",
             title : "President",
@@ -23,6 +28,11 @@ const committees = {
                     options: {
                         hotspot: true
                       }
+                },
+                {
+                    name: "link",
+                    type: "url",
+                    title: "Linkedin Profile Link"
                 }
             ]
         },
@@ -41,6 +51,11 @@ const committees = {
                     options: {
                         hotspot: true
                       }
+                },
+                {
+                    name: "link",
+                    type: "url",
+                    title: "Linkedin Profile Link"
                 }
             ]
         },
@@ -59,6 +74,11 @@ const committees = {
                     options: {
                         hotspot: true
                       }
+                },
+                {
+                    name: "link",
+                    type: "url",
+                    title: "Linkedin Profile Link"
                 }
             ]
         },
@@ -77,6 +97,11 @@ const committees = {
                     options: {
                         hotspot: true
                       }
+                },
+                {
+                    name: "link",
+                    type: "url",
+                    title: "Linkedin Profile Link"
                 }
             ]
         },
@@ -314,7 +339,16 @@ const committees = {
                 }
             ]
         },
-    ]
+    ],
+    orderings: [
+        {
+          title: 'electedYear',
+          name: 'Elected Year',
+          by: [
+            {field: 'electedYear', direction: 'desc'}
+          ]
+        }
+      ]
 }
     
 

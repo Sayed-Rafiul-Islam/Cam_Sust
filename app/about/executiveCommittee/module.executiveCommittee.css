@@ -1,3 +1,10 @@
 .executiveCommittee{
     width: 84.5vw;
 }
+
+@media (max-width: 576px) {
+    .executiveCommittee{
+        width: 390px;
+        padding-top: 70px;
+    }
+}
