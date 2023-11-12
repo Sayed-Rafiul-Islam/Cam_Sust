@@ -1,3 +1,22 @@
 .contactUs{
     width: 85vw;
+    padding-bottom: 50px;
+}
+.map{
+    height: 400px;
+    width: 600px;
+    margin-left: 30px;
+}
+
+@media (max-width: 576px) {
+    .contactUs{
+        width: 400px;
+        padding-bottom: 20px;
+    }
+    .map{
+        position: relative;
+        left: 10px;
+        height: 300px;
+        width: 300px;
+    }
 }
