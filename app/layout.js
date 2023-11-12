@@ -7,6 +7,7 @@ import bgSmall from "../image/telescope1.jpg"
 import Background from '@/components/Background'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '@/components/Footer'
 
 export const inter = Inter({ subsets: ['latin'] })
 
@@ -52,8 +53,8 @@ export default async function RootLayout({ children}) {
               {/* Footer */}
             {/* -------------------------------------------------------- */}
 
-              <footer className='w-screen bg-black py-20 footer'>
-                      <h1 className='text-center text-xl text-white'>Footer</h1>
+              <footer className='w-screen bg-black py-16 footer'>
+                      <Footer/>
               </footer>
 
               <ToastContainer

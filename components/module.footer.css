@@ -1,0 +1,8 @@
+.footer h2 {
+    border-left: 3px solid orange;
+    padding-left: 10px;
+}
+.footer a:hover {
+    color: orange;
+    transition-duration: .5s;
+}
