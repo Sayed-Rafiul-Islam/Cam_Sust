@@ -131,3 +131,48 @@ export const getAdviers = async ()  => {
 
     return advisers 
 }
+// --------------------------------------------------------------------------------------------
+
+export const getConstitution = async ()  => {
+
+    const client = createClient({
+        projectId : "f89xy3cs",
+        dataset : "production",
+        apiVersion : "2023-11-05",
+        useCdn : true
+    })  
+
+    const constitution = await client.fetch(`*[_type == "constitution"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+
+    return constitution 
+}
+// --------------------------------------------------------------------------------------------
+
+export const getFaq = async ()  => {
+
+    const client = createClient({
+        projectId : "f89xy3cs",
+        dataset : "production",
+        apiVersion : "2023-11-05",
+        useCdn : true
+    })  
+
+    const faq = await client.fetch(`*[_type == "faq"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+
+    return faq 
+}
+// --------------------------------------------------------------------------------------------
+
+export const getCommittees = async ()  => {
+
+    const client = createClient({
+        projectId : "f89xy3cs",
+        dataset : "production",
+        apiVersion : "2023-11-05",
+        useCdn : true
+    })  
+
+    const committees = await client.fetch(`*[_type == "committees"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+
+    return committees 
+}
