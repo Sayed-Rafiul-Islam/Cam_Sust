@@ -84,6 +84,23 @@ export const getProducts = async ()  => {
     return products 
 }
 
+// --------------------------------------------------------------------------------------------
+
+export const getAboutUs = async ()  => {
+
+    const client = createClient({
+        projectId : "f89xy3cs",
+        dataset : "production",
+        apiVersion : "2023-11-05",
+        useCdn : true
+    })  
+
+    const aboutUs = await client.fetch(`*[_type == "about"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
+
+    return aboutUs 
+}
+// --------------------------------------------------------------------------------------------
+
 export const getProduct = async (slug)  => {
 
     const client = createClient({
