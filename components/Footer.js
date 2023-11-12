@@ -2,8 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import './module.footer.css'
 
-export default function 
-() {
+export default function Footer() {
   return (
     <div className='lg:w-5/6 w-11/12 footer grid lg:grid-cols-4 grid-cols-2 lg:ml-48 ml-12 my-5'>
         <div className='text-white lg:mb-0 mb-20'>
@@ -31,3 +30,5 @@ export default function
     </div>
   )
 }
+
+
