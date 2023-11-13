@@ -54,7 +54,7 @@ const camTalks = {
           title: 'serial',
           name: 'Serial No',
           by: [
-            {field: 'serial', direction: 'asc'}
+            {field: 'serial', direction: 'desc'}
           ]
         }
       ]

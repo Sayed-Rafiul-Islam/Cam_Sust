@@ -1,13 +1,9 @@
 "use client"
-import StudyCircles from './counter/StudyCircles';
-import Cosmanias from './counter/Cosmanias';
-import AstroCarnivals from './counter/AstroCarnivals';
-import WorldSpaceWeeks from './counter/WorldSpaceWeeks';
-import StarGazings from './counter/StarGazings';
 import './module.counters.css'
 import { useState, useEffect } from 'react';
+import { useSpring, animated } from '@react-spring/web'
 
-const Counters = () => {
+const Counters = ({counter}) => {
 
       const [now, setNow] = useState(false)
 
@@ -23,73 +19,34 @@ const Counters = () => {
 
       useEffect(() => {
         window.addEventListener('scroll', start)
-      } ,[now]);
-
-
-      
-
-
-      const studyCircles = now ? 66 : 0;
-      const starGazibgs = now ? 27 : 0;
-      const cosmanias = now ? 17 : 0;
-      const astroCarnivals = now ? 4 : 0;
-      const worldSpaceWeeks = now ? 5 : 0;
+      } ,[]);
     
     return (
-        <div className='lg:flex lg:justify-between grid grid-cols-2'>
-          <div className='flex flex-col items-center lg:w-full w-full'>
-            <h1 className='count'>
-              <StudyCircles
-              n = {studyCircles}
-              ></StudyCircles>
-            </h1>
-            <h2 className='count-name'>Study Circles</h2>
-            
-          </div>
-
-          
-          <div className='flex flex-col items-center lg:w-full w-full'>
-            <h1 className='count'>
-              <StarGazings
-              n = {starGazibgs}
-              ></StarGazings>
-            </h1>
-            <h2 className='count-name'>Star Gazing</h2>
-            
-          </div>
-      
-          <div className='flex flex-col items-center lg:w-full w-full'>
-            <h1 className='count'>
-              <Cosmanias
-              n = {cosmanias}
-              ></Cosmanias>
-            </h1>
-            <h2 className='count-name'>Cosmania</h2>
-            
-          </div>
-
-          <div className='flex flex-col items-center lg:w-full w-full'>
-            <h1 className='count'>
-              <AstroCarnivals
-              n = {astroCarnivals}
-              ></AstroCarnivals>
-            </h1>
-      
-            <h2 className='count-name'>Astro Carnival</h2>
-          </div>
-          
-          
-          <div className='lg:flex lg:flex-col col-span-2 text-center items-center lg:w-full w-full'>
-            <h1 className='count'>
-              <WorldSpaceWeeks
-              n = {worldSpaceWeeks}
-              ></WorldSpaceWeeks>
-            </h1>
-            <h2 className='count-name'>World Space Week</h2>
-          </div>
-          
-
-          
+        <div className='grid grid-cols-2 lg:grid-cols-5'>
+            {
+              counter.map((counter)=>
+              {
+                now ? counter.eventCount : 0
+                const {number} = useSpring({
+                  from : {number : 0},
+                  number : counter.eventCount,
+                  delay : 200,
+                  config : {mass : 1, tension : 20, friction :10}
+                })
+                return (
+                        <div className='flex flex-col items-center lg:w-full w-full'>
+                            <h1 className='count'>
+                            <animated.div>
+                                {number.to((n)=> n.toFixed(0))}
+                            </animated.div>
+                            </h1>
+                            <h2 className='count-name'>{counter.eventName}</h2>
+                          
+                        </div>
+                )
+              }
+              )
+            }
         </div>
       
     );

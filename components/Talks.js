@@ -5,7 +5,6 @@ import PortableText from 'react-portable-text';
 
 
 const Talks = ({titleColored,titleUnColored,subtitle,details,additionalWords,url}) => {
-    console.log(url)
     return (
         <div className='mt-12 w-5/6 mx-auto pb-8 border-b-2 text-white'>
             <h1 className='text-3xl font-bold text-center'><span className='orange'>{titleColored} </span>{titleUnColored}</h1>

@@ -4,8 +4,8 @@ import "./module.home.css"
 import rocket from '../image/rocket.png'
 import RegularActivities from '@/components/RegularActivities';
 import MessegeSection from '@/components/MessegeSection';
-import Counters from '@/components/Counters';
 import PeopleTalkingAboutUs from '@/components/PeopleTalkingAboutUs';
+import Count from '@/components/Count';
 
 export default function Home() {
 
@@ -32,7 +32,7 @@ export default function Home() {
       </section>
 
       <section className='wid-90 lg:mx-0 mx-auto lg:mt-24 mt-12'>
-        <Counters></Counters>
+        <Count></Count>
       </section>
 
       <section className='wid-90 lg:mx-0 mx-auto'>

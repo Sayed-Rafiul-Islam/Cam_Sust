@@ -6,6 +6,9 @@ import { getCamTalks } from '@/sanity/sanity-utils';
 
 
 
+
+
+
 const Activities = async () => {
     const camTalks = await getCamTalks()
 
