@@ -13,7 +13,7 @@ export default function ConstitutionElement({constitution}) {
         <div className='w-11/12 mx-auto mt-10'>
           {
             constitution[0].content.map(({sectionName,section,_key})=>
-            <Accordion key={_key} style={{ background: "rgba(0, 0, 0, 0.455);", color: "rgb(214, 203, 203);"}}>
+            <Accordion key={_key} className='accord'>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
