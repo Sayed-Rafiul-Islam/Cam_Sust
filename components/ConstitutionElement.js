@@ -10,10 +10,10 @@ import './module.constitutionElement.css'
 export default function ConstitutionElement({constitution}) {
   return (
     <div>
-        <div className='w-11/12 mx-auto mt-10'>
+        <div className='w-11/12 mx-auto mt-10 accord'>
           {
             constitution[0].content.map(({sectionName,section,_key})=>
-            <Accordion key={_key} className='accord'>
+            <Accordion key={_key} >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
