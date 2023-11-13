@@ -1,7 +1,8 @@
 "use client"
+import CounterOn from './CounterOn';
 import './module.counters.css'
 import { useState, useEffect } from 'react';
-import { useSpring, animated } from '@react-spring/web'
+
 
 const Counters = ({counter}) => {
 
@@ -27,18 +28,10 @@ const Counters = ({counter}) => {
               counter.map((counter)=>
               {
                 now ? counter.eventCount : 0
-                const {number} = useSpring({
-                  from : {number : 0},
-                  number : counter.eventCount,
-                  delay : 200,
-                  config : {mass : 1, tension : 20, friction :10}
-                })
                 return (
                         <div key={counter._id} className='flex flex-col items-center lg:w-full w-full'>
                             <h1 className='count'>
-                            <animated.div>
-                                {number.to((n)=> n.toFixed(0))}
-                            </animated.div>
+                              <CounterOn n={counter.eventCount} />
                             </h1>
                             <h2 className='count-name'>{counter.eventName}</h2>
                           
