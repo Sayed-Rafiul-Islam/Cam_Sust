@@ -3,7 +3,6 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PortableText from 'react-portable-text';
 import './module.constitutionElement.css'
@@ -20,10 +19,9 @@ export default function ConstitutionElement({constitution}) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>{sectionName}</Typography>
+              {sectionName}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
               <PortableText
                   projectId='f89xy3cs'
                   dataset='production'
@@ -49,7 +47,7 @@ export default function ConstitutionElement({constitution}) {
                   
                   
                   />
-              </Typography>
+
             </AccordionDetails>
           </Accordion>
             )

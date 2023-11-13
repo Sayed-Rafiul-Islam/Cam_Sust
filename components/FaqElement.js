@@ -3,14 +3,13 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PortableText from 'react-portable-text';
 import './module.faqElement.css'
 
 export default function FaqElement({faq}) {
   return (
-    <div>
+    <div >
         <div className='w-11/12 mx-auto'>
         <h1 className='text-white text-5xl font-bold text-center mb-10'>Frequently Asked Questions</h1>
         {
@@ -21,10 +20,10 @@ export default function FaqElement({faq}) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>{question}</Typography>
+             {question}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+            
               <PortableText
                   projectId='f89xy3cs'
                   dataset='production'
@@ -50,7 +49,7 @@ export default function FaqElement({faq}) {
                   
                   
                   />
-              </Typography>
+            
             </AccordionDetails>
           </Accordion>
             )
