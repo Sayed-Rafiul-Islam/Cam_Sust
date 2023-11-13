@@ -71,6 +71,7 @@ useEffect(() => window.addEventListener('scroll', changeBackground), []);
                     {
                         menu.map(({title, href}) => 
                             <NavLink
+                            prefetch
                             onClick={() => setVisible(true)}  
                             className='p-4 text-white navItem' 
                             key={title} exact={href=='/'} 

@@ -15,7 +15,7 @@ const Activities = () => {
             subtitle : "",
             detail : "CAM-Talk with Moonzarin Reza was a one of the series CAM-TALK before “SUST Astro Carnival 2023”. Moonzarin Reza is a Visiting Scholar, Fermilab and Graduate Teaching & Research Assistant, Texas A&M University, United States.",
             discussion : "In this talk, Moonzarin Reza discusses about applications of Machine Learning Algorithm in Astronomical data analysis.",
-            url : "https://www.youtube.com/watch?v=kOEDG3j1bjs"
+            url : "https://www.facebook.com/camsust/videos/3377274902583396/"
         },
         {
             title : "LIVING INSIDE A STELLAR ATMOSPHERE",

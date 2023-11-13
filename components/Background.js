@@ -131,6 +131,7 @@ const Background = ({children}) => {
                             href={href}
                             exact={href==exact} 
                             activeClassName="activated" 
+                            prefetch
                             >{title}
                             </NavLink>)
                     }

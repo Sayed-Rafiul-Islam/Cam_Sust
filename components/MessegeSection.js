@@ -23,8 +23,8 @@ const MessegeSection = () => {
                 <h2 className='header-msg text-center lg:text-5xl text-3xl font-bold mb-10'>{cardContent.title}</h2>
                 <p className='text-justify font-light text-white'>Dear Astro-lovers,<br/>{cardContent.paragraph}</p>
                     <div className='flex justify-center mt-8'>
-                    <button type="button" onClick={() => router.push('/blogs')} className='btn-1'>Writing section</button>
-                    <button type="button" onClick={() => router.push('/blogs/contributeToCamBlogs')} className='btn-2'>Our Blogs</button>
+                    <button type="button" onClick={() => router.push('/blogs/contributeToCamBlogs')} className='btn-1'>Writing section</button>
+                    <button type="button" onClick={() => router.push('/blogs')} className='btn-2'>Our Blogs</button>
                 </div>
             </div>  
         </div>
