@@ -18,11 +18,13 @@ export default function ConstitutionElement({constitution}) {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              className='accord'
             >
               {sectionName}
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetail className='accord's>
               <PortableText
+              className='accord'
                   projectId='f89xy3cs'
                   dataset='production'
                   content={section}
@@ -48,7 +50,7 @@ export default function ConstitutionElement({constitution}) {
                   
                   />
 
-            </AccordionDetails>
+            </AccordionDetail>
           </Accordion>
             )
           }
