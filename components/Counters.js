@@ -34,7 +34,7 @@ const Counters = ({counter}) => {
                   config : {mass : 1, tension : 20, friction :10}
                 })
                 return (
-                        <div className='flex flex-col items-center lg:w-full w-full'>
+                        <div key={counter._id} className='flex flex-col items-center lg:w-full w-full'>
                             <h1 className='count'>
                             <animated.div>
                                 {number.to((n)=> n.toFixed(0))}
