@@ -14,7 +14,7 @@ export default function FaqElement({faq}) {
         <h1 className='text-white text-5xl font-bold text-center mb-10'>Frequently Asked Questions</h1>
         {
             faq.map(({question,answer,_id})=> 
-            <Accordion className='faq-accord' key={_id}>
+            <Accordion style={{ background: "rgba(0, 0, 0, 0.455);", color: "rgb(214, 203, 203);"}} key={_id}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
