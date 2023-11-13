@@ -1,7 +1,14 @@
+
+import FaqElement from '@/components/FaqElement'
+import { getFaq } from '@/sanity/sanity-utils'
 import React from 'react'
 
-export default function Faq() {
+export default async function Faq() {
+  const faq = await getFaq()
   return (
-    <div>Faq</div>
+    <div className="py-20">
+        <FaqElement faq={faq} />
+    </div>
+    
   )
 }

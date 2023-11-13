@@ -8,6 +8,14 @@ import Background from '@/components/Background'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '@/components/Footer'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+
+     
+   
 
 export const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +34,7 @@ export default async function RootLayout({ children}) {
     <html lang="en">
       <body className={inter.className}>        
         <div className='body-wrapper mx-auto'>
+
 
 
           {/* -------------------------------------------------------- */}
@@ -70,7 +79,7 @@ export default async function RootLayout({ children}) {
               theme="dark"
               />
 
-
+      
         </div> 
       </body>
     </html>
