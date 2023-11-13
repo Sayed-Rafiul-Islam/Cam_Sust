@@ -22,7 +22,7 @@ export default function ConstitutionElement({constitution}) {
             >
               {sectionName}
             </AccordionSummary>
-            <AccordionDetail className='accord's>
+            <AccordionDetails className='accord's>
               <PortableText
               className='accord'
                   projectId='f89xy3cs'
@@ -50,7 +50,7 @@ export default function ConstitutionElement({constitution}) {
                   
                   />
 
-            </AccordionDetail>
+            </AccordionDetails>
           </Accordion>
             )
           }
