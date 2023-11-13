@@ -10,11 +10,11 @@ import './module.faqElement.css'
 export default function FaqElement({faq}) {
   return (
     <div >
-        <div className='w-11/12 mx-auto animate__animated animate__fadeInDown '>
+        <div className='w-11/12 mx-auto animate__animated animate__fadeInDown faq-accord'>
         <h1 className='text-white text-5xl font-bold text-center mb-10'>Frequently Asked Questions</h1>
         {
             faq.map(({question,answer,_id})=> 
-            <Accordion className='faq-accord' key={_id}>
+            <Accordion key={_id}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"

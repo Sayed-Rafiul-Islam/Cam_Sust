@@ -1,4 +1,7 @@
-.faq-accord{
+.faq-accord div{
     background: rgba(0, 0, 0, 0.455);
     color: rgb(214, 203, 203);  
+}
+.faq-accord div div{
+    background: transparent;
 }
