@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 const Counters = ({counter}) => {
 
       const [now, setNow] = useState(false)
+      console.log(now)
 
 
     const start = () => {
@@ -20,28 +21,26 @@ const Counters = ({counter}) => {
 
       useEffect(() => {
         window.addEventListener('scroll', start)
-      } ,[]);
+      } ,[now]);
     
     return (
         <div className='grid grid-cols-2 lg:grid-cols-5'>
             {
               counter.map((counter)=>
               {
-                now ? counter.eventCount : 0
+                const count = now ? counter.eventCount : 0
                 return (
                         <div key={counter._id} className='flex flex-col items-center lg:w-full w-full'>
                             <h1 className='count'>
-                              <CounterOn n={counter.eventCount} />
+                              <CounterOn n={count} />
                             </h1>
                             <h2 className='count-name'>{counter.eventName}</h2>
-                          
                         </div>
                 )
               }
               )
             }
         </div>
-      
     );
 };
 
