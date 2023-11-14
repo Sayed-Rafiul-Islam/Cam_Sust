@@ -22,7 +22,7 @@ function urlFor(source) {
 export default function Committees({committees}) {
 
     const [committee,setCommittee] = useState(committees[0])
-    const {name,president,gs,ags,treasurer,ofs,os,aos,rp,arp,sc,asc,fe,afe,pva,apva,it,ait} = committee
+    const {name,president,gs,ags,treasurer,ofs,os,aos,rp,arp,sc,asc,fe,afe,pva,apva,it,ait,ps,aps} = committee
     const handleCommittee = (_id) =>{
         const selectedCommittee = committees.filter(committee => committee._id === _id)
         setCommittee(selectedCommittee[0])
