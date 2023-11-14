@@ -3,19 +3,19 @@
   width: 78.3vw;
   padding-inline:  50px;
 }
-
-swiper-container {
-    width: 100%;
-    height: 100%;
+  swiper-container {
+    position: relative;
+    width: 550px;
+    height: 300px;
   }
 
   swiper-slide {
+    height: 100%;
+    position: relative;
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   swiper-slide img {
@@ -25,118 +25,28 @@ swiper-container {
     object-fit: cover;
   }
 
-  swiper-container {
-    width: 10%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
 /* ----------------------------------------- */
-  .mySwipera {
-    height: 50vh;
-    width: 40vw;
-  }
 
-  .mySwipera2 {
-    height: 10vh;
-    width: 40vw;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-
-  .mySwipera2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-  .mySwipera2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwipera2 .swiper-slide-thumb-active {
-    opacity: 1;
-    cursor: pointer;
-  }
-
-  /* --------------------------------------------- */
-  .mySwiperb {
-    height: 50vh;
-    width: 40vw;
-  }
-
-  .mySwiperb2 {
-    height: 10vh;
-    width: 40vw;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-
-  .mySwiperb2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiperb2 .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-  /* --------------------------------------------- */
-  .mySwiper {
-    height: 50vh;
-    width: 40vw;
-  }
-
-  .mySwiper2 {
-    height: 10vh;
-    width: 40vw;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-
-  .mySwiper2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiper2 .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-  /* --------------------------------------------- */
-  .mySwiperc {
-    height: 50vh;
-    width: 40vw;
-  }
-
-  .mySwiperc2 {
-    height: 10vh;
-    width: 40vw;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-
-  .mySwiperc2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiperc2 .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-
-  swiper-slide img {
-    display: block;
+  .sub-image{
+    position: relative;
+    height: 40px;
     width: 100%;
+  }
+  #sub-swiper {
+    height: 10vh;
+    width: 550px;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  #sub-swiper swiper-slide {
+    width: 25%;
     height: 100%;
-    object-fit: cover;
+    opacity: 0.4;
+  }
+
+  #sub-swiper swiper-slide:hover {
+    opacity: 1;
   }
 
 
@@ -151,106 +61,31 @@ swiper-container {
       width: 78.3vw;
       padding: 50px 50px;
     }
+    swiper-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
     .slides-wrapper {
-      width: inherit;
+    width: inherit;
     position: relative;
     right: 50px;
     }
     /* ----------------------------------------- */
-  .mySwipera {
-    height: 250px;
-    width: 300px;
-  }
-  .mySwipera2 {
+  #sub-swiper {
     height: 55px;
     width: 300px;
     box-sizing: border-box;
   }
 
-  .mySwipera2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-  .mySwipera2 swiper-slide {
+  #sub-swiper swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
   }
 
-  .mySwipera2 .swiper-slide-thumb-active {
+  #sub-swiper swiper-slider {
     opacity: 1;
-    cursor: pointer;
-  }
 
-  /* --------------------------------------------- */
-  .mySwiperb {
-    height: 250px;
-    width: 300px;
-  }
-
-  .mySwiperb2 {
-    height: 55px;
-    width: 300px;
-    box-sizing: border-box;
-  }
-
-  .mySwiperb2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiperb2 .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-  /* --------------------------------------------- */
-  .mySwiper {
-    height: 250px;
-    width: 300px;
-  }
-
-  .mySwiper2 {
-    height: 55px;
-    width: 300px;
-    box-sizing: border-box;
-  }
-
-  .mySwiper2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiper2 .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-  /* --------------------------------------------- */
-  .mySwiperc {
-    height: 250px;
-    width: 300px;
-  }
-
-  .mySwiperc2 {
-    height: 55px;
-    width: 300px;
-    box-sizing: border-box;
-  }
-
-  .mySwiperc2 swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiperc2 .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-
-  swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   }

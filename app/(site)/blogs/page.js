@@ -4,6 +4,7 @@ import { getBlogs } from '@/sanity/sanity-utils'
 import Link from 'next/link'
 import imageUrlBuilder from '@sanity/image-url'
 import PortableText from 'react-portable-text'
+import Image from 'next/image'
 
 
 const builder = imageUrlBuilder({
@@ -34,7 +35,7 @@ function urlFor(source) {
             <li key={blog._id}  className='overflow-hidden'>
                 <article className='lg:p-4 p-2 my-4 border border-red-500 blog-items'>
                 <Link prefetch href={`/blogs/${blog.slug}`}>
-                    {blog.poster && (<img src={urlFor(blog.poster).url()}/>)}            
+                    {blog.poster && (<div className='blog-items-img'><Image fill src={urlFor(blog.poster).url()}/></div>)}            
                 </Link>    
 
                 <div className='lg:ml-6 lg:w-1/2 w-full lg:p-0 px-2'>

@@ -24,7 +24,8 @@
    
    
 }
-.blog-items img {
+.blog-items-img {
+    position: relative;
     border-radius: 15px;
     width: 400px;
     height: 250px;
