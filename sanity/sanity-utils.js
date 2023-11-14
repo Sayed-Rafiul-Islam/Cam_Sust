@@ -238,7 +238,7 @@ export const getSchoolPrograms = async ()  => {
 }
 // --------------------------------------------------------------------------------------------
 
-export const getStudyCircles = async ()  => {a
+export const getStudyCircles = async ()  => {
 
     const client = createClient({
         projectId : "f89xy3cs",

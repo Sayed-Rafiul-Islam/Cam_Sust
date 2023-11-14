@@ -4,6 +4,12 @@ const faq = {
     title : "FAQ",
     fields : [
         {
+            name : "serial",
+            type : "number",
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
+        },
+        {
             name : "question",
             type : "string",
             title : "Question"
@@ -28,7 +34,16 @@ const faq = {
                 }
             ]
         },
-    ]
+    ],
+    orderings: [
+        {
+            name: 'serial',
+            title: 'Serial No',
+          by: [
+            {field: 'serial', direction: 'asc'}
+          ]
+        }
+      ]
 }
 
 export default faq;

@@ -6,7 +6,8 @@ const peopleTalks = {
         {
             name : "serial",
             type : "number",
-            title : "Serial No"
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
         },
         {
             name : "name",
@@ -34,10 +35,10 @@ const peopleTalks = {
     ],
     orderings: [
         {
-          title: 'serial',
-          name: 'Serial No',
+            name: 'serial',
+            title: 'Serial No',
           by: [
-            {field: 'serial', direction: 'asc'}
+            {field: 'serial', direction: 'desc'}
           ]
         }
       ]

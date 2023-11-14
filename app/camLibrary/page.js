@@ -5,6 +5,9 @@ import { getBooks } from '@/sanity/sanity-utils';
 
 const CamLibrary = async () => {
     const books = await getBooks()
+    books.sort(function(a, b) { 
+        return b.serial - a.serial
+      });
 
     return (
         <div className='animate__animated animate__fadeInLeft w-screen lg:pt-20 pt-12'>

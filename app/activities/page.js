@@ -4,13 +4,11 @@ import React from 'react'
 import "../../components/module.talk.css"
 import { getCamTalks } from '@/sanity/sanity-utils';
 
-
-
-
-
-
 const Activities = async () => {
     const camTalks = await getCamTalks()
+    camTalks.sort(function(a, b) { 
+        return b.serial - a.serial
+      });
 
     return (
         <div className='activities lg:pt-0 pt-12 animate__animated animate__fadeInLeft pb-10'>

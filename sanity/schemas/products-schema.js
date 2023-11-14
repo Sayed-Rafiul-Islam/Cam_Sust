@@ -4,6 +4,12 @@ const products = {
     title : "Products",
     fields : [
         {
+            name : "serial",
+            type : "number",
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
+        },
+        {
             name : "name",
             type : "string",
             title : "Name"
@@ -65,7 +71,16 @@ const products = {
             type : "number",
             title : "Price"
         },
-    ]
+    ],
+    orderings: [
+        {
+            name: 'serial',
+            title: 'Serial No',
+          by: [
+            {field: 'serial', direction: 'desc'}
+          ]
+        }
+      ]
 }
 
 export default products;

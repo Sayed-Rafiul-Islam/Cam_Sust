@@ -1,12 +1,13 @@
-const schoolProgram = {
-    name : "schoolProgram",
+const schoolPrograms = {
+    name : "schoolPrograms",
     type : "document",
-    title : "School Program",
+    title : "School Programs",
     fields : [
         {
             name : "serial",
             type : "number",
-            title : "Serial No"
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
         },
          {
             name : "style",
@@ -41,13 +42,13 @@ const schoolProgram = {
     ],
     orderings: [
         {
-          title: 'serial',
-          name: 'Serial No',
+            name: 'serial',
+            title: 'Serial No',
           by: [
-            {field: 'serial', direction: 'asc'}
+            {field: 'serial', direction: 'desc'}
           ]
         }
       ]
 }
 
-export default schoolProgram;
+export default schoolPrograms;

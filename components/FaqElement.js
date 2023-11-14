@@ -8,6 +8,9 @@ import PortableText from 'react-portable-text';
 import './module.faqElement.css'
 
 export default function FaqElement({faq}) {
+  faq.sort(function(a, b) { 
+    return a.serial - b.serial
+  });
   return (
     <div >
         <div className='w-11/12 mx-auto animate__animated animate__fadeInDown faq-accord'>

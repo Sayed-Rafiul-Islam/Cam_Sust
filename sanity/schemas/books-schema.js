@@ -6,7 +6,8 @@ const books = {
         {
             name : "serial",
             type : "string",
-            title : "Serial No"
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
         },
         {
             name : "title",
@@ -23,7 +24,16 @@ const books = {
             type : "string",
             title : "Publisher"
         }
-    ]
+    ],
+    orderings: [
+        {
+            name: 'serial',
+            title: 'Serial No',
+          by: [
+            {field: 'serial', direction: 'desc'}
+          ]
+        }
+      ]
 }
 
 export default books;

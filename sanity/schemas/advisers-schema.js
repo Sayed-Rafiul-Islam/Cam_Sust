@@ -4,6 +4,12 @@ const advisers = {
     title : "Advisers",
     fields : [
         {
+            name : "serial",
+            type : "number",
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
+        },
+        {
             name : "name",
             type : "string",
             title : "Name"
@@ -29,7 +35,16 @@ const advisers = {
               hotspot: true
             }
           }
-    ]
+    ],
+    orderings: [
+        {
+          name: 'serial',
+          title: 'Serial No',
+          by: [
+            {field: 'serial', direction: 'desc'}
+          ]
+        }
+      ]
 }
 
 export default advisers;

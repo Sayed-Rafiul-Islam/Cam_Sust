@@ -18,6 +18,9 @@ function urlFor(source) {
 
 const PeopleTalkingAboutUs = async () => {
     const peopleTalks = await getPeopleTalks()
+    peopleTalks.sort(function(a, b) { 
+        return b.serial - a.serial
+      });
 
     return (
         <div className='rounded-xl mt-12 pt-12 px-6 people-card mb-6'>

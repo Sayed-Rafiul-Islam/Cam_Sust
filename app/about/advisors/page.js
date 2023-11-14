@@ -16,6 +16,9 @@ function urlFor(source) {
 
 const Advisors = async () => {
     const allAdvisers = await getAdviers()
+    allAdvisers.sort(function(a, b) { 
+        return b.serial - a.serial
+      });
     const chiefAdvisers = allAdvisers.filter(adviser => adviser.position === "Cheif Adviser") 
     const advisers = allAdvisers.filter(adviser => adviser.position === "Adviser") 
     return (

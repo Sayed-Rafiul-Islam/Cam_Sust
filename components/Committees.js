@@ -22,12 +22,14 @@ export default function Committees({committees}) {
 
     const [committee,setCommittee] = useState(committees[0])
     const {name,president,gs,ags,treasurer,ofs,os,aos,rp,arp,sc,asc,fe,afe,pva,apva,it,ait} = committee
-    console.log(gs.link)
     const handleCommittee = (_id) =>{
         const selectedCommittee = committees.filter(committee => committee._id === _id)
         setCommittee(selectedCommittee[0])
-
     }
+
+    committees.sort(function(a, b) { 
+        return b.serial - a.serial
+      });
   return (
     <div>
         
@@ -35,7 +37,6 @@ export default function Committees({committees}) {
             <h1 className='text-5xl text-white font-bold text-center'>{name}</h1>
             <div className='text-center my-5'>
             <form className=''>
-                    {/* <label for="cars">Choose a car:</label> */}
                     <select className='ec-btn' onChange={(e)=>handleCommittee(e.target.value)}>
                         {
                             committees.map(({name,_id})=>

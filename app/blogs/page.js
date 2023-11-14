@@ -19,6 +19,9 @@ function urlFor(source) {
 
  const Blogs = async () => {
     const blogs = await getBlogs()
+    blogs.sort(function(a, b) {
+        return b.serial - a.serial
+      });
   return (
     <div className='blogs  animate__animated animate__fadeInLeft'>
     <h1 className='text-5xl font-bold text-white lg:ml-0 ml-16 lg:pt-0 pt-12  text-center'>BLOGS</h1>

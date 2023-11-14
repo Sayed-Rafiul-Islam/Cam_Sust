@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 const Counters = ({counter}) => {
 
       const [now, setNow] = useState(false)
-      console.log(now)
 
 
     const start = () => {
@@ -22,6 +21,8 @@ const Counters = ({counter}) => {
       useEffect(() => {
         window.addEventListener('scroll', start)
       } ,[now]);
+
+      
     
     return (
         <div className='grid grid-cols-2 lg:grid-cols-5'>

@@ -18,6 +18,9 @@ function urlFor(source) {
 
 const CamShop = async () => {
     const products = await getProducts();
+    products.sort(function(a, b) { 
+        return b.serial - a.serial
+      });
     return (
         <div className='w-screen animate__animated animate__fadeInLeft'>
             <h1 className='text-5xl pt-20 text-center font-bold text-white'>CAM SHOP</h1>

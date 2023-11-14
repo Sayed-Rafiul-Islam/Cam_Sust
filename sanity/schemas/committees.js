@@ -4,14 +4,15 @@ const committees = {
     title : "Committees",
     fields : [
         {
+            name : "serial",
+            type : "number",
+            title : "Serial No",
+validation: (Rule) => Rule.required(),
+        },
+        {
             name : "name",
             type : "string",
             title : "Committee Name"
-        },
-        {
-            name : "electedYear",
-            type : "number",
-            title : "Elected Year"
         },
         {
             name : "president",
@@ -342,10 +343,10 @@ const committees = {
     ],
     orderings: [
         {
-          title: 'electedYear',
-          name: 'Elected Year',
+            name: 'serial',
+            title: 'Serial No',
           by: [
-            {field: 'electedYear', direction: 'desc'}
+            {field: 'serial', direction: 'desc'}
           ]
         }
       ]

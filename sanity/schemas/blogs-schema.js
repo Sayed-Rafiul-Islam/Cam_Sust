@@ -61,7 +61,22 @@ const blogs = {
                 }
             ]
         },
-    ]
+        {
+          name : "serial",
+          type : "number",
+          title : "Serial No",
+          validation: (Rule) => Rule.required(),
+      }
+    ],
+    orderings: [
+        {
+          name: 'serial',
+          title: 'Serial No',
+          by: [
+            {field: 'serial', direction: 'desc'}
+          ]
+        }
+      ]
 }
 
 export default blogs;

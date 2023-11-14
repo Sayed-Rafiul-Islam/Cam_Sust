@@ -45,7 +45,6 @@ export default async function SlugPage ({params}) {
                     h4: ({props}) => <h4 className=" text-3xl mt-1" {...props} />,
                     h5: ({props}) => <h5 className=" text-2xl mt-1" {...props} />,
                     h6: ({props}) => <h6 className=" text-xl mt-1" {...props} />,
-                    li: ({ children }) => <li className="tex-5xl">{children}</li>,
                     normal: ({ children }) => {
                       if (children.length === 1 && children[0] === '') {
                         return <br />
@@ -53,7 +52,7 @@ export default async function SlugPage ({params}) {
                       return <p className=''>{children}</p>
                     },
 
-                    em : ({children}) => {<i className='inline-block text-center'>{children}</i>}
+                    i : ({children}) => {<i className=' text-center'>{children}</i>}
                     
                   }}
                   

@@ -6,7 +6,8 @@ const regularActivities = {
         {
             name : "serial",
             type : "number",
-            title : "Serial No"
+            title : "Serial No",
+            validation: (Rule) => Rule.required(),
         },
         {
             name : "icon",
@@ -25,12 +26,12 @@ const regularActivities = {
         },
         
     ],
-    orderings: [
+      orderings: [
         {
-          title: 'serial',
-          name: 'Serial No',
+          name: 'serial',
+          title: 'Serial No',
           by: [
-            {field: 'serial', direction: 'asc'}
+            {field: 'serial', direction: 'desc'}
           ]
         }
       ]
