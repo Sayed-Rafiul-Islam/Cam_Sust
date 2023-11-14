@@ -2,6 +2,7 @@ import React from 'react';
 import './module.advisors.css'
 import { getAdviers } from '@/sanity/sanity-utils';
 import imageUrlBuilder from '@sanity/image-url'
+import Image from 'next/image';
 
 const builder = imageUrlBuilder({
     projectId : "f89xy3cs",
@@ -28,7 +29,9 @@ const Advisors = async () => {
                     chiefAdvisers.map(({_id,name,position,department,image}) =>
                     <div className='mx-auto relative adviser-card rounded-xl my-5' key={_id}>
                         <div className='rounded-xl adviser-img-wrapper'>
-                            <img  src={urlFor(image).url()} alt={name} />
+                            <div className='adviser-image'>
+                                <Image fill src={urlFor(image).url()} alt={name} />
+                            </div>
                             <div className='text-white adviser-dept'>
                                 <p className=''>{position}</p>
                                 <p className=''>{department}</p>
@@ -45,7 +48,9 @@ const Advisors = async () => {
                     advisers.map(({_id,name,position,department,image}) =>
                     <div className='mx-auto relative adviser-card rounded-xl my-5' key={_id}>
                         <div className='rounded-xl adviser-img-wrapper'>
-                            <img  src={urlFor(image).url()} alt={name} />
+                            <div className='adviser-image'>
+                                <Image fill src={urlFor(image).url()} alt={name} />
+                            </div>
                             <div className='text-white adviser-dept'>
                                 <p className=''>{position}</p>
                                 <p className=''>{department}</p>

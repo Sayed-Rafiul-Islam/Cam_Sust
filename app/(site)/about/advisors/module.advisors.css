@@ -46,10 +46,21 @@
     border-left: 5px solid orange;
 }
 
+.adviser-image {
+    position: relative;
+    height: 300px;
+    width: 290px;
+}
+
 
 @media (max-width: 576px) {
     .advisors{
         padding-block: 30px;
         width: 380px;
+    }
+    .adviser-image {
+        position: relative;
+        height: 300px;
+        width: 290px;
     }
 }

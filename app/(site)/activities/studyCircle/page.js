@@ -41,7 +41,7 @@ const StudyCircle = async () => {
                     studyCircles[0].images.map((image,index)=>
                     <swiper-slide key={index}>
                         <div className='scSliderImage'>
-                            <Image fill src={urlFor(image).url()} />
+                            <Image fill src={urlFor(image).url()} alt='slider-image' />
                         </div>
                     </swiper-slide>
                     )
