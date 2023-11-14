@@ -3,6 +3,7 @@ import "./module.peopleTalkingAboutUs.css"
 import { getPeopleTalks } from '@/sanity/sanity-utils';
 import imageUrlBuilder from '@sanity/image-url'
 import PortableText from 'react-portable-text';
+import Image from 'next/image';
 
 
 const builder = imageUrlBuilder({
@@ -29,8 +30,10 @@ const PeopleTalkingAboutUs = async () => {
             {
                 peopleTalks.map((peopleTalk,index)=>
                 <div key={index} className='flex lg:flex-row flex-col items-center'>
-                    <div className='w-3/4 lg:mb-8 mb-4'>
-                        <img className='rounded-full' src={urlFor(peopleTalk.image).url()} alt={peopleTalk.name}/>
+                    <div className='w-3/4 lg:mr-2 mr-2 lg:mb-8 mb-4'>
+                        <div className='people-image'>
+                            <Image fill className='rounded-full' src={urlFor(peopleTalk.image).url()} alt={peopleTalk.name}/>
+                        </div>
                     </div>
                     <div className='lg:ml-20 ml-0'>
                     <PortableText className='text-gray-200 text-justify'

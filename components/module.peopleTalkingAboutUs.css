@@ -4,3 +4,16 @@
 .orange {
     color: orange;
 }
+.people-image {
+    position: relative;
+    height: 300px;
+    width:  300px;
+}
+
+@media (max-width: 576px) {
+    .people-image {
+        position: relative;
+        height: 250px;
+        width:  250px;
+    }
+}

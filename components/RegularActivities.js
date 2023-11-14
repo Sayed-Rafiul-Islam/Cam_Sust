@@ -14,7 +14,7 @@ const RegularActivities = async () => {
             {
                 regularActivities.map(({_id,icon,name,activity})=>
                 <div className='mx-3 px-4 py-3 lg:mt-0 mt-6 rounded-lg card' key={_id}> 
-                    <img src={icon} />
+                    {/* <img src={icon} /> */}
                     <h2 style={{color:"rgb(255, 174, 25)"}} className='text-center mb-3 text-xl font-bold'>{name}</h2>
                     <p className='text-white font-thin text-justify'>{activity}</p>
                 </div>    
