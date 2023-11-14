@@ -2,8 +2,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
-import telescope from "../image/telescope.jpeg"
-import bgSmall from "../image/telescope1.jpg"
+import telescope from "../../image/telescope.jpeg"
+import bgSmall from "../../image/telescope1.jpg"
 import Background from '@/components/Background'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';

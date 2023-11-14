@@ -1,7 +1,6 @@
 import Talks from '@/components/Talks';
 import 'animate.css';
 import React from 'react'
-import "../../components/module.talk.css"
 import { getCamTalks } from '@/sanity/sanity-utils';
 
 const Activities = async () => {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import "animate.css";
 import "./module.home.css"
-import rocket from '../image/rocket.png'
+import rocket from '../../image/rocket.png'
 import RegularActivities from '@/components/RegularActivities';
 import MessegeSection from '@/components/MessegeSection';
 import PeopleTalkingAboutUs from '@/components/PeopleTalkingAboutUs';

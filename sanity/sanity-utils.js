@@ -17,7 +17,8 @@ export const getBlogs = async ()  => {
         author,
         category,
         poster,
-        content
+        content,
+        serial
     }`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
     return blogs 

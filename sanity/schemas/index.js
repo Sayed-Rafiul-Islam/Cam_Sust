@@ -13,6 +13,21 @@ import regularActivities from './regular-activities-schema'
 import schoolProgram from './school-program-schema'
 import studyCircle from './study-circle-schema'
 
-const schemas = [blogs,books,products,about,advisers,committees,constitution,faq,camTalks,peopleTalks,counter,regularActivities,schoolProgram,studyCircle]
+const schemas = [
+    blogs,
+    books,
+    products,
+    about,
+    advisers,
+    committees,
+    constitution,
+    faq,
+    camTalks,
+    peopleTalks,
+    counter,
+    regularActivities,
+    schoolProgram,
+    studyCircle,
+]
 
 export default schemas

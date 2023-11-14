@@ -4,6 +4,11 @@ const blogs = {
     title : "Blogs",
     fields : [
         {
+            name : "id",
+            type : "number",
+            title : "ID"
+        },
+        {
             name : "title",
             type : "string",
             title : "Title"

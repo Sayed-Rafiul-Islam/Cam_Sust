@@ -33,7 +33,7 @@ const StudyCircle = async () => {
         <div className='studyCircle lg:pt-0 pt-12 lg:mx-0 lg:pr-12 pr-0 mx-auto'>
             <h1 className='text-5xl text-center text-white font-bold'>STUDY CIRCLE</h1> 
 
-                <swiper-container class="mySwiper lg:w-1/2 w-full" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+                <swiper-container className="mySwiper lg:w-1/2 w-full" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
                 slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
                 coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" autoplay-delay="2500">
                 {
