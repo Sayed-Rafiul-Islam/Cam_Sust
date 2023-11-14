@@ -7,7 +7,7 @@ const committees = {
             name : "serial",
             type : "number",
             title : "Serial No",
-validation: (Rule) => Rule.required(),
+            validation: (Rule) => Rule.required(),
         },
         {
             name : "name",
@@ -326,6 +326,42 @@ validation: (Rule) => Rule.required(),
             name : "ait",
             type : "object",
             title : "Assistant IT Secretary",
+            fields : [
+                {
+                    name: "name",
+                    type : "string"
+                },
+                {
+                    name: "image",
+                    type : "image",
+                    options: {
+              hotspot: true
+            }
+                }
+            ]
+        },
+        {
+            name : "ps",
+            type : "object",
+            title : "Publication Secretary",
+            fields : [
+                {
+                    name: "name",
+                    type : "string"
+                },
+                {
+                    name: "image",
+                    type : "image",
+                    options: {
+              hotspot: true
+            }
+                }
+            ]
+        },
+        {
+            name : "aps",
+            type : "object",
+            title : "Assistant Publication Secretary",
             fields : [
                 {
                     name: "name",

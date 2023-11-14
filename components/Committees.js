@@ -415,6 +415,49 @@ export default function Committees({committees}) {
                     </div>
                 </div>
                 {/* ----------------------------------- */}
+                <div className='grid lg:grid-cols-2 grid-cols-1 '>
+                    <div className={ps ? 'mx-auto ec-card' : 'hidden'}>
+                    {
+                            ps.link ?
+                            <Link href={ps.link}>
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ps.image).url()} alt='Publication Secretary' />
+                                </div>
+                                <h2>{ps.name}</h2>
+                                <h3 className='position'>Publication Secretary</h3>
+                            </Link>
+                            :
+                            <div>
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(it.image).url()} alt='Publication Secretary' />
+                                </div>
+                                <h2>{ps.name}</h2>
+                                <h3 className='position'>Publication Secretary</h3>
+                            </div>
+                        }
+                    </div>
+                    <div className={aps ? 'mx-auto ec-card' : 'hidden'}>
+                    {
+                            aps.link ?
+                            <Link href={aps.link}>
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(aps.image).url()} alt='Asst. Publication Secretary' />
+                                </div>
+                                <h2>{aps.name}</h2>
+                                <h3 className='position'>Asst. Publication Secretary</h3>
+                            </Link>
+                            :
+                            <div>
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(aps.image).url()} alt='Asst. Publication Secretary' />
+                                </div>
+                                <h2>{aps.name}</h2>
+                                <h3 className='position'>Asst. Publication Secretary</h3>
+                            </div>
+                        }
+                    </div>
+                </div>
+                {/* ----------------------------------- */}
             </div>
         </div>
     </div>
