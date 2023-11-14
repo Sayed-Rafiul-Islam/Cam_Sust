@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import imageUrlBuilder from '@sanity/image-url'
 import Link from 'next/link'
 import './module.committee.css'
+import Image from 'next/image';
 
 
 
@@ -52,13 +53,17 @@ export default function Committees({committees}) {
                         {
                             president.link ?
                             <Link href={president.link}>
-                                <img src={urlFor(president.image).url()} alt='president' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(president.image).url()} alt='president' />
+                                </div>
                                 <h2>{president.name}</h2>
                                 <h3 className='position'>President</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(president.image).url()} alt='president' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(president.image).url()} alt='president' />
+                                </div>
                                 <h2>{president.name}</h2>
                                 <h3 className='position'>President</h3>
                             </div>
@@ -71,13 +76,17 @@ export default function Committees({committees}) {
                     {
                             gs.link ?
                             <Link href={gs.link}>
-                                <img src={urlFor(gs.image).url()} alt='president' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(gs.image).url()} alt='president' />
+                                </div>
                                 <h2>{gs.name}</h2>
                                 <h3 className='position'>General Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(gs.image).url()} alt='president' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(gs.image).url()} alt='president' />
+                                </div>
                                 <h2>{gs.name}</h2>
                                 <h3 className='position'>General Secretary</h3>
                             </div>
@@ -87,13 +96,17 @@ export default function Committees({committees}) {
                     {
                             ags.link ?
                             <Link href={ags.link}>
-                                <img src={urlFor(ags.image).url()} alt='president' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ags.image).url()} alt='president' />
+                                </div>
                                 <h2>{ags.name}</h2>
                                 <h3 className='position'>Asst. General Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(ags.image).url()} alt='president' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ags.image).url()} alt='president' />
+                                </div>
                                 <h2>{ags.name}</h2>
                                 <h3 className='position'>Asst. General Secretary</h3>
                             </div>
@@ -106,13 +119,17 @@ export default function Committees({committees}) {
                     {
                             treasurer.link ?
                             <Link href={treasurer.link}>
-                                <img src={urlFor(treasurer.image).url()} alt='Tresurer' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(treasurer.image).url()} alt='Tresurer' />
+                                </div>
                                 <h2>{treasurer.name}</h2>
                                 <h3 className='position'>Treasurer</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(treasurer.image).url()} alt='Tresurer' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(treasurer.image).url()} alt='Tresurer' />
+                                </div>
                                 <h2>{treasurer.name}</h2>
                                 <h3 className='position'>Treasurer</h3>
                             </div>
@@ -122,13 +139,17 @@ export default function Committees({committees}) {
                     {
                             ofs.link ?
                             <Link href={ofs.link}>
-                                <img src={urlFor(ofs.image).url()} alt='Office Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ofs.image).url()} alt='Office Secretary' />
+                                </div>
                                 <h2>{ofs.name}</h2>
                                 <h3 className='position'>Office Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(ofs.image).url()} alt='Office Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ofs.image).url()} alt='Office Secretary' />
+                                </div>
                                 <h2>{ofs.name}</h2>
                                 <h3 className='position'>Office Secretary</h3>
                             </div>
@@ -141,13 +162,17 @@ export default function Committees({committees}) {
                     {
                             os.link ?
                             <Link href={os.link}>
-                                <img src={urlFor(os.image).url()} alt='Organizing Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(os.image).url()} alt='Organizing Secretary' />
+                                </div>
                                 <h2>{os.name}</h2>
                                 <h3 className='position'>Organizing Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(os.image).url()} alt='Organizing Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(os.image).url()} alt='Organizing Secretary' />
+                                </div>
                                 <h2>{os.name}</h2>
                                 <h3 className='position'>Organizing Secretary</h3>
                             </div>
@@ -157,13 +182,17 @@ export default function Committees({committees}) {
                     {
                             aos.link ?
                             <Link href={aos.link}>
-                                <img src={urlFor(aos.image).url()} alt='Asst. Organizing Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(aos.image).url()} alt='Asst. Organizing Secretary' />
+                                </div>
                                 <h2>{aos.name}</h2>
                                 <h3 className='position'>Asst. Organizing Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(aos.image).url()} alt='Asst. Organizing Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(aos.image).url()} alt='Asst. Organizing Secretary' />
+                                </div>
                                 <h2>{aos.name}</h2>
                                 <h3 className='position'>Asst. Organizing Secretary</h3>
                             </div>
@@ -176,13 +205,17 @@ export default function Committees({committees}) {
                     {
                             os.link ?
                             <Link href={rp.link}>
-                                <img src={urlFor(rp.image).url()} alt='Research & Project Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(rp.image).url()} alt='Research & Project Secretary' />
+                                </div>
                                 <h2>{rp.name}</h2>
                                 <h3 className='position'>Research & Project Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(rp.image).url()} alt='Research & Project Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(rp.image).url()} alt='Research & Project Secretary' />
+                                </div>
                                 <h2>{rp.name}</h2>
                                 <h3 className='position'>Research & Project Secretary</h3>
                             </div>
@@ -192,13 +225,17 @@ export default function Committees({committees}) {
                     {
                             arp.link ?
                             <Link href={arp.link}>
-                                <img src={urlFor(arp.image).url()} alt='Asst. Research & Project Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(arp.image).url()} alt='Asst. Research & Project Secretary' />
+                                </div>
                                 <h2>{arp.name}</h2>
                                 <h3 className='position'>Asst. Research & Project Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(arp.image).url()} alt='Asst. Research & Project Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(arp.image).url()} alt='Asst. Research & Project Secretary' />
+                                </div>
                                 <h2>{arp.name}</h2>
                                 <h3 className='position'>Asst. Research & Project Secretary</h3>
                             </div>
@@ -211,13 +248,17 @@ export default function Committees({committees}) {
                     {
                             os.link ?
                             <Link href={sc.link}>
-                                <img src={urlFor(sc.image).url()} alt='Study Circle Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(sc.image).url()} alt='Study Circle Secretary' />
+                                </div>
                                 <h2>{sc.name}</h2>
                                 <h3 className='position'>Study Circle Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(sc.image).url()} alt='Study Circle Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(sc.image).url()} alt='Study Circle Secretary' />
+                                </div>
                                 <h2>{sc.name}</h2>
                                 <h3 className='position'>Study Circle Secretary</h3>
                             </div>
@@ -227,13 +268,17 @@ export default function Committees({committees}) {
                     {
                             asc.link ?
                             <Link href={asc.link}>
-                                <img src={urlFor(asc.image).url()} alt='Asst. Study Circle Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(asc.image).url()} alt='Asst. Study Circle Secretary' />
+                                </div>
                                 <h2>{asc.name}</h2>
                                 <h3 className='position'>Asst. Study Circle Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(asc.image).url()} alt='Asst. Study Circle Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(asc.image).url()} alt='Asst. Study Circle Secretary' />
+                                </div>
                                 <h2>{asc.name}</h2>
                                 <h3 className='position'>Asst. Study Circle Secretary</h3>
                             </div>
@@ -246,13 +291,17 @@ export default function Committees({committees}) {
                     {
                             fe.link ?
                             <Link href={fe.link}>
-                                <img src={urlFor(fe.image).url()} alt='Field Education Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(fe.image).url()} alt='Field Education Secretary' />
+                                </div>
                                 <h2>{fe.name}</h2>
                                 <h3 className='position'>Field Education Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(fe.image).url()} alt='Field Education Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(fe.image).url()} alt='Field Education Secretary' />
+                                </div>
                                 <h2>{fe.name}</h2>
                                 <h3 className='position'>Field Education Secretary</h3>
                             </div>
@@ -262,13 +311,17 @@ export default function Committees({committees}) {
                     {
                             afe.link ?
                             <Link href={afe.link}>
-                                <img src={urlFor(afe.image).url()} alt='Asst. Field Education Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(afe.image).url()} alt='Asst. Field Education Secretary' />
+                                </div>
                                 <h2>{afe.name}</h2>
                                 <h3 className='position'>Asst. Field Education Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(afe.image).url()} alt='Asst. Field Education Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(afe.image).url()} alt='Asst. Field Education Secretary' />
+                                </div>
                                 <h2>{afe.name}</h2>
                                 <h3 className='position'>Asst. Field Education Secretary</h3>
                             </div>
@@ -281,13 +334,17 @@ export default function Committees({committees}) {
                     {
                             pva.link ?
                             <Link href={pva.link}>
-                                <img src={urlFor(pva.image).url()} alt='Publicity & Visual Arts Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(pva.image).url()} alt='Publicity & Visual Arts Secretary' />
+                                </div>
                                 <h2>{pva.name}</h2>
                                 <h3 className='position'>Publicity & Visual Arts Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(pva.image).url()} alt='Publicity & Visual Arts Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(pva.image).url()} alt='Publicity & Visual Arts Secretary' />
+                                </div>
                                 <h2>{pva.name}</h2>
                                 <h3 className='position'>Publicity & Visual Arts Secretary</h3>
                             </div>
@@ -297,13 +354,17 @@ export default function Committees({committees}) {
                     {
                             apva.link ?
                             <Link href={apva.link}>
-                                <img src={urlFor(apva.image).url()} alt='Asst. Publicity & Visual Arts Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(apva.image).url()} alt='Asst. Publicity & Visual Arts Secretary' />
+                                </div>
                                 <h2>{apva.name}</h2>
                                 <h3 className='position'>Asst. Publicity & Visual Arts Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(apva.image).url()} alt='Asst. Publicity & Visual Arts Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(apva.image).url()} alt='Asst. Publicity & Visual Arts Secretary' />
+                                </div>
                                 <h2>{apva.name}</h2>
                                 <h3 className='position'>Asst. Publicity & Visual Arts Secretary</h3>
                             </div>
@@ -316,13 +377,17 @@ export default function Committees({committees}) {
                     {
                             os.link ?
                             <Link href={it.link}>
-                                <img src={urlFor(it.image).url()} alt='IT Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(it.image).url()} alt='IT Secretary' />
+                                </div>
                                 <h2>{it.name}</h2>
                                 <h3 className='position'>IT Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(it.image).url()} alt='IT Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(it.image).url()} alt='IT Secretary' />
+                                </div>
                                 <h2>{it.name}</h2>
                                 <h3 className='position'>IT Secretary</h3>
                             </div>
@@ -332,13 +397,17 @@ export default function Committees({committees}) {
                     {
                             ait.link ?
                             <Link href={ait.link}>
-                                <img src={urlFor(ait.image).url()} alt='Asst. IT Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ait.image).url()} alt='Asst. IT Secretary' />
+                                </div>
                                 <h2>{ait.name}</h2>
                                 <h3 className='position'>Asst. IT Secretary</h3>
                             </Link>
                             :
                             <div>
-                                <img src={urlFor(ait.image).url()} alt='Asst. IT Secretary' />
+                                <div className='ec-image'>
+                                    <Image fill src={urlFor(ait.image).url()} alt='Asst. IT Secretary' />
+                                </div>
                                 <h2>{ait.name}</h2>
                                 <h3 className='position'>Asst. IT Secretary</h3>
                             </div>
