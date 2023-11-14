@@ -4,6 +4,7 @@ import './module.camShop.css'
 import { getProducts } from '@/sanity/sanity-utils';
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url'
+import Image from 'next/image';
 
 const builder = imageUrlBuilder({
     projectId : "f89xy3cs",
@@ -29,7 +30,7 @@ const CamShop = async () => {
                 {
                     products.map(({_id,name,slug,images,currency,price}) => (   
                             <div className='product-card lg:w-3/4 w-full lg:mx-0 mx-auto text-center text-white rounded-lg' key={_id}>
-                                <Link  href={`/camShop/${slug}`}><div className='overflow-hidden mt-5'><img  className='mx-auto rounded-b-xl' width={300} src={urlFor(images).url()}/></div></Link>
+                                <Link  href={`/camShop/${slug}`}><div className='overflow-hidden product-image mt-5 mx-auto'><Image fill className='mx-auto rounded-b-xl' src={urlFor(images).url()} alt='product-image'/></div></Link>
                                 <Link  href={`/camShop/${slug}`}><h3 className='font-bold mt-3'>{name}</h3>
                                 <p className='text-orange-400'>{currency} {price}</p>
                                 </Link>

@@ -4,6 +4,7 @@ import './module.cart.css'
 import imageUrlBuilder from '@sanity/image-url'
 import { toast } from 'react-toastify'
 import "animate.css";
+import Image from 'next/image'
 
 const builder = imageUrlBuilder({
   projectId : "f89xy3cs",
@@ -110,7 +111,9 @@ export default function Cart() {
               <td>
                 <div className="flex justify-center">
                     <div className="w-12 h-12 avatar rounded-full">
-                      <img className='rounded-full' src={urlFor(image).url()} alt="Avatar Tailwind CSS Component" />
+                      <div className='product-image'>
+                          <Image fill className='rounded-full' src={urlFor(image).url()} alt="Avatar Tailwind CSS Component" />
+                      </div>
                     </div>
                 </div>
               </td>

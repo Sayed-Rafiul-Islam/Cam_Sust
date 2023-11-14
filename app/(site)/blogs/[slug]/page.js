@@ -2,6 +2,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { getBlog } from '@/sanity/sanity-utils';
 import PortableText from 'react-portable-text';
 import './module.blog.css'
+import Image from 'next/image';
 
 
 
@@ -24,9 +25,9 @@ export default async function SlugPage ({params}) {
     const blog = await getBlog(params.slug)
 
     return (
-        <div className="blog-body mx-auto lg:px-20 lg:pt-20 lg:pb-12 px-2 py-6">
+        <div className="blog-body mx-auto lg:px-20 lg:pt-20 lg:pb-12 px-2 py-6">m
                 <h1 className="lg:text-6xl text-3xl font-bold text-center">{blog.title}</h1>
-                <img className='rounded-xl mx-auto lg:my-6 my-3' src={urlFor(blog.poster).url()} alt='cover image' />
+               <div className='cover mx-auto'><Image className='rounded-xl' fill src={urlFor(blog.poster).url()} alt='cover image' /></div>
                 <div className='flex lg:text-base text-xs justify-between lg:px-12 px-2 lg:pb-6 pb-2 lg:my-4 orange border-b border-b-red-500'>
                   <p>{blog.author}</p>
                   <p>{blog.category}</p>
