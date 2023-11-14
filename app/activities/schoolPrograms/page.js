@@ -37,8 +37,8 @@ const SchoolPrograms = async () => {
                             thumbs-swiper=".mySwipera2" space-between="10" navigation="true"  autoplay-delay="2500">
                                 {
                                     images.map((image,index)=>
-                                    <swiper-slide>
-                                        <img key={index} alt='slide image' src={urlFor(image).url()} />
+                                    <swiper-slide key={index}>
+                                        <img  alt='slide image' src={urlFor(image).url()} />
                                     </swiper-slide>
                                     )
                                 }
@@ -48,8 +48,8 @@ const SchoolPrograms = async () => {
                             watch-slides-progress="true">
                                 {
                                     images.map((image,index)=>
-                                    <swiper-slide>
-                                        <img key={index} alt='slide image' src={urlFor(image).url()} />
+                                    <swiper-slide key={index}>
+                                        <img  alt='slide image' src={urlFor(image).url()} />
                                     </swiper-slide>
                                     )
                                 }

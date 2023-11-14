@@ -38,38 +38,11 @@ const StudyCircle = async () => {
                 coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" autoplay-delay="2500">
                 {
                     studyCircles[0].images.map((image,index)=>
-                    <swiper-slide>
-                        <img key={index} src={urlFor(image).url()} />
+                    <swiper-slide key={index}>
+                        <img  src={urlFor(image).url()} />
                     </swiper-slide>
                     )
                 }
-                <swiper-slide>
-                <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                </swiper-slide>
             </swiper-container>
 
             <p className='text-white font-light text-justify w-3/4 mx-auto pb-8'>{studyCircles[0].text}</p>
