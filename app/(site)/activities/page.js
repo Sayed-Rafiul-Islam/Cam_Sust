@@ -18,7 +18,7 @@ const Activities = async () => {
                 In Bangladesh, there is no single university that teaches astronomy or astrophysics but a lot of organizations tried to spread astronomy all over the country. As we are one of them, we know how many challenges they face. So we will try to share some of those stories through CAM-TALK
                 </p>
             </div>
-            <div className=''>
+            <div>
                 {
                     camTalks.map(({titleColored,titleUnColored,subtitle,details,additionalWords,url,_id}) => 
                         <Talks

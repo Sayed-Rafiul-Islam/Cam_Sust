@@ -7,6 +7,7 @@ import 'swiper/css';
 import Script from 'next/script';
 import { getStudyCircles } from '@/sanity/sanity-utils';    
 import imageUrlBuilder from '@sanity/image-url'
+import Image from 'next/image';
 
 
 const builder = imageUrlBuilder({
@@ -39,7 +40,9 @@ const StudyCircle = async () => {
                 {
                     studyCircles[0].images.map((image,index)=>
                     <swiper-slide key={index}>
-                        <img  src={urlFor(image).url()} />
+                        <div className='scSliderImage'>
+                            <Image fill src={urlFor(image).url()} />
+                        </div>
                     </swiper-slide>
                     )
                 }

@@ -2,7 +2,7 @@
     width: 87.1vw;
 }
 swiper-container {
-    width: 100%;
+    width: 90%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -14,18 +14,32 @@ swiper-container {
     height: 300px;
   }
 
-  swiper-slide img {
-
-    display: block;
-    width: 100%;
+  .scSliderImage{
+    position: relative;
+    width: 370px;
+    height: 280px;
   }
 
   /* -------------------------------------- */
 
   @media (max-width: 576px) {
     swiper-container {
+      overflow: hidden;
       width: 100%;
       padding-top: 40px;
       padding-bottom: 15px;
+    }
+    swiper-slide {
+      background-position: center;
+      background-size: cover;
+      margin-inline: auto;
+      width: 150px;
+      height: 100px;
+    }
+    .scSliderImage{
+      margin-inline: auto;
+      position: relative;
+      width: 100%;
+      height: 100px;
     }
   }
