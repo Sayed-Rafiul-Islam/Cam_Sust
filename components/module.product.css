@@ -2,6 +2,16 @@
     position: relative;
     width: 90%;
 }
+.product-image {
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+.product-sub-image{
+    position: relative;
+    height:90px;
+    width: 90px;
+}
 .size-btn{
     position: relative;
     border: 1px solid white;
@@ -85,6 +95,16 @@
 }
 
 @media (max-width: 576px) {
+    .product-image {
+        position: relative;
+        height: 300px;
+        width: 300px;
+    }
+    .product-sub-image{
+        position: relative;
+        height:80px;
+        width: 80px;
+    }
     .product-img {
         width: 50px;
     }

@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
 import cartData from '@/utils/cartData'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 
@@ -51,8 +52,11 @@ export default function Product({product}) {
   return (
     <div className='product lg:mt-24 mt-16 mx-auto flex lg:flex-row flex-col items-center'>
         <div className='lg:w-1/2  animate__animated animate__fadeInLeft'>
-          <img className='w-2/3 mx-auto rounded-xl' src={urlFor(images[selectedImage]).url()} alt='Product Showcasing Image'  />
-              <div className='flex lg:mt-4 mt-2 ml-14 lg:ml-28'>
+          <div className='product-image mx-auto'>
+            <Image fill className='rounded-xl' src={urlFor(images[selectedImage]).url()} alt='Product Showcasing Image'  />
+          </div>
+          
+              <div className='flex lg:mt-4 mt-2 ml-10 lg:ml-28'>
               { 
                 images.map((image,index)=>(
                 <div 
@@ -60,7 +64,9 @@ export default function Product({product}) {
                 onClick={()=> setSelectedImage(index)}
                 className='mr-2'
                 >
-                      <img className={index == selectedImage ? "border border-orange-600 rounded-lg product-img" : "rounded-lg product-img"}  src={urlFor(image).url()} alt='Product images' />
+                      <div className='product-sub-image'>
+                        <Image fill className={index == selectedImage ? "border border-orange-600 rounded-lg product-img" : "rounded-lg product-img"}  src={urlFor(image).url()} alt='Product images' />
+                      </div>
                   </div>
                 ))
               }
@@ -68,6 +74,7 @@ export default function Product({product}) {
         </div>
       <div className='text-white lg:pr-20 w-5/6 mt-6 lg:mt-0 text-center lg:text-left lg:w-1/2 lg:pb-0 pb-12  animate__animated animate__fadeInRight'>
         <h1 className='mb-4 text-3xl font-bold'>{name}</h1>
+        <h2 className='my-2 text-orange-400'><b>Price :</b> <span className='text-white'>{currency} {price}</span></h2>
         <p className='text-orange-400 font-bold'>Description :</p>
         <PortableText className='text-sm text-justify'
         projectId='f89xy3cs'
@@ -92,7 +99,7 @@ export default function Product({product}) {
           
         }}
         />
-        <h2 className='my-2 text-orange-400'><b>Price :</b> <span className='text-white'>{currency} {price}</span></h2>
+        
         <p className='my-2 text-white'><b className='text-orange-400'>Select Size : </b>{selectedSize}</p>
         {
           sizes.map((size,index)=>(
