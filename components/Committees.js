@@ -49,7 +49,8 @@ export default function Committees({committees}) {
         </div>
             <div className='pb-10 mt-10'>
                 <div className='grid grid-cols-1'>
-                    <div className={president ? 'mx-auto ec-card' : 'hidden'}>
+                    {   president &&
+                        <div className='mx-auto ec-card'>
                         {
                             president.link ?
                             <Link href={president.link}>
@@ -69,11 +70,13 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
                 </div>
                 {/* ------------------------------ */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div  className={gs ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { gs &&
+                        <div className='mx-auto ec-card'>
+                        {
                             gs.link ?
                             <Link href={gs.link}>
                                 <div className='ec-image'>
@@ -92,8 +95,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div  className={ags ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                     { ags &&
+                        <div  className='mx-auto ec-card'>
+                        {
                             ags.link ?
                             <Link href={ags.link}>
                                 <div className='ec-image'>
@@ -112,11 +117,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div  className={treasurer ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { treasurer &&
+                        <div  className='mx-auto ec-card'>
+                        {
                             treasurer.link ?
                             <Link href={treasurer.link}>
                                 <div className='ec-image'>
@@ -135,8 +143,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div  className={ofs ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { ofs &&
+                        <div  className='mx-auto ec-card'>
+                        {
                             ofs.link ?
                             <Link href={ofs.link}>
                                 <div className='ec-image'>
@@ -155,11 +165,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={os ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { os &&
+                        <div className='mx-auto ec-card'>
+                        {
                             os.link ?
                             <Link href={os.link}>
                                 <div className='ec-image'>
@@ -178,8 +191,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div className={aos ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { aos &&
+                        <div className='mx-auto ec-card'>
+                        {
                             aos.link ?
                             <Link href={aos.link}>
                                 <div className='ec-image'>
@@ -198,11 +213,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={rp ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { rp &&
+                        <div className='mx-auto ec-card'>
+                        {
                             os.link ?
                             <Link href={rp.link}>
                                 <div className='ec-image'>
@@ -221,8 +239,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div className={arp ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { arp &&
+                        <div className='mx-auto ec-card'>
+                        {
                             arp.link ?
                             <Link href={arp.link}>
                                 <div className='ec-image'>
@@ -241,11 +261,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={sc ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { sc &&
+                        <div className='mx-auto ec-card'>
+                        {
                             os.link ?
                             <Link href={sc.link}>
                                 <div className='ec-image'>
@@ -264,8 +287,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div className={asc ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { asc &&
+                        <div className='mx-auto ec-card'>
+                        {
                             asc.link ?
                             <Link href={asc.link}>
                                 <div className='ec-image'>
@@ -284,11 +309,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={fe ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { fe &&
+                        <div className='mx-auto ec-card'>
+                        {
                             fe.link ?
                             <Link href={fe.link}>
                                 <div className='ec-image'>
@@ -307,8 +335,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div className={afe ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { afe&&
+                        <div className='mx-auto ec-card'>
+                        {
                             afe.link ?
                             <Link href={afe.link}>
                                 <div className='ec-image'>
@@ -327,11 +357,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={pva ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { pva &&
+                        <div className='mx-auto ec-card'>
+                        {
                             pva.link ?
                             <Link href={pva.link}>
                                 <div className='ec-image'>
@@ -350,8 +383,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div className={apva ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { apva &&
+                        <div className='mx-auto ec-card'>
+                        {
                             apva.link ?
                             <Link href={apva.link}>
                                 <div className='ec-image'>
@@ -370,11 +405,14 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={it ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    { it &&
+                        <div className='mx-auto ec-card'>
+                        {
                             os.link ?
                             <Link href={it.link}>
                                 <div className='ec-image'>
@@ -393,8 +431,10 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
-                    <div className={ait ? 'mx-auto ec-card' : 'hidden'}>
-                    {
+                    }
+                    { ait &&
+                        <div className='mx-auto ec-card'>
+                        {
                             ait.link ?
                             <Link href={ait.link}>
                                 <div className='ec-image'>
@@ -413,49 +453,56 @@ export default function Committees({committees}) {
                             </div>
                         }
                     </div>
+                    }
+                    
                 </div>
                 {/* ----------------------------------- */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 '>
-                    <div className={ps ? 'mx-auto ec-card' : 'hidden'}>
-                    {
-                            ps.link ?
-                            <Link href={ps.link}>
-                                <div className='ec-image'>
-                                    <Image fill src={urlFor(ps.image).url()} alt='Publication Secretary' />
+                   { ps &&
+                     <div className='mx-auto ec-card'>
+                            {
+                                ps.link ?
+                                <Link href={ps.link}>
+                                    <div className='ec-image'>
+                                        <Image fill src={urlFor(ps.image).url()} alt='Publication Secretary' />
+                                    </div>
+                                    <h2>{ps.name}</h2>
+                                    <h3 className='position'>Publication Secretary</h3>
+                                </Link>
+                                :
+                                <div>
+                                    <div className='ec-image'>
+                                        <Image fill src={urlFor(it.image).url()} alt='Publication Secretary' />
+                                    </div>
+                                    <h2>{ps.name}</h2>
+                                    <h3 className='position'>Publication Secretary</h3>
                                 </div>
-                                <h2>{ps.name}</h2>
-                                <h3 className='position'>Publication Secretary</h3>
-                            </Link>
-                            :
-                            <div>
-                                <div className='ec-image'>
-                                    <Image fill src={urlFor(it.image).url()} alt='Publication Secretary' />
+                          
+                            }
+                        </div>
+                      }
+                       {  aps &&
+                        <div className='mx-auto ec-card'>
+                            {
+                                aps.link ?
+                                <Link href={aps.link}>
+                                    <div className='ec-image'>
+                                        <Image fill src={urlFor(aps.image).url()} alt='Asst. Publication Secretary' />
+                                    </div>
+                                    <h2>{aps.name}</h2>
+                                    <h3 className='position'>Asst. Publication Secretary</h3>
+                                </Link>
+                                :
+                                <div>
+                                    <div className='ec-image'>
+                                        <Image fill src={urlFor(aps.image).url()} alt='Asst. Publication Secretary' />
+                                    </div>
+                                    <h2>{aps.name}</h2>           
+                                    <h3 className='position'>Asst. Publication Secretary</h3>
                                 </div>
-                                <h2>{ps.name}</h2>
-                                <h3 className='position'>Publication Secretary</h3>
-                            </div>
-                        }
-                    </div>
-                    <div className={aps ? 'mx-auto ec-card' : 'hidden'}>
-                    {
-                            aps.link ?
-                            <Link href={aps.link}>
-                                <div className='ec-image'>
-                                    <Image fill src={urlFor(aps.image).url()} alt='Asst. Publication Secretary' />
-                                </div>
-                                <h2>{aps.name}</h2>
-                                <h3 className='position'>Asst. Publication Secretary</h3>
-                            </Link>
-                            :
-                            <div>
-                                <div className='ec-image'>
-                                    <Image fill src={urlFor(aps.image).url()} alt='Asst. Publication Secretary' />
-                                </div>
-                                <h2>{aps.name}</h2>
-                                <h3 className='position'>Asst. Publication Secretary</h3>
-                            </div>
-                        }
-                    </div>
+                            }
+                        </div>
+                    }
                 </div>
                 {/* ----------------------------------- */}
             </div>
