@@ -472,7 +472,7 @@ export default function Committees({committees}) {
                                 :
                                 <div>
                                     <div className='ec-image'>
-                                        <Image fill src={urlFor(it.image).url()} alt='Publication Secretary' />
+                                        <Image fill src={urlFor(ps.image).url()} alt='Publication Secretary' />
                                     </div>
                                     <h2>{ps.name}</h2>
                                     <h3 className='position'>Publication Secretary</h3>
