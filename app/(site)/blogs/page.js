@@ -1,10 +1,10 @@
 import React from 'react'
 import "./module.blogs.css"
 import { getBlogs } from '@/sanity/sanity-utils'
-import Link from 'next/a'
 import imageUrlBuilder from '@sanity/image-url'
 import PortableText from 'react-portable-text'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const builder = imageUrlBuilder({
