@@ -52,8 +52,7 @@
 }
 
 .navItem:hover {
-  transform: scale(1.1);
-  border-bottom: 3px solid orange;
+  transform: scale(1.2);
   color: orange;
   transition-duration: .2s;
   transition-timing-function: linear;

@@ -10,15 +10,12 @@
 .navbar.active {
     background-color: black;
     transition-duration: .5s;
-    transition-timing-function: ease-in-out;
 }
 
 .activated {
     color: orange;
     font-weight: bold;
     transition-duration: .5s;
-    border: 1px solid transparent;
-    transition-timing-function: ease-in-out;
   }
   .menu-button {
     display: none;

@@ -3,6 +3,10 @@ import { getBlog } from '@/sanity/sanity-utils';
 import PortableText from 'react-portable-text';
 import './module.blog.css'
 import Image from 'next/image';
+import CommentBox from '@/components/CommentBox';
+
+
+
 
 
 
@@ -17,15 +21,33 @@ function urlFor(source) {
   return builder.image(source)
 }
 
+const getComments = async () => {
+  try {
+    const res = await fetch(`http://localhost:3000/api/comments`,{cache : "no-store"})
+    if (!res.ok) {
+      throw new Error("faild to fetch comments")
+    }
+    return res.json()
+  } catch (error){
+    console.log("error getting comments", error)
+  }
+}
+
 
 
 
 export default async function SlugPage ({params}) {
 
     const blog = await getBlog(params.slug)
+    const {comments} = await getComments()
+    const thisBlogComments = comments.filter(comment => comment.slug === params.slug)
+    
+
+
 
     return (
-        <div className="blog-body mx-auto lg:px-20 lg:pt-20 lg:pb-12 px-2 py-6">m
+       <div>
+         <div className="blog-body mx-auto lg:px-20 lg:pt-20 lg:pb-12 px-2 py-6">
                 <h1 className="lg:text-6xl text-3xl font-bold text-center">{blog.title}</h1>
                <div className='cover mx-auto'><Image className='rounded-xl' fill src={urlFor(blog.poster).url()} alt='cover image' /></div>
                 <div className='flex lg:text-base text-xs justify-between lg:px-12 px-2 lg:pb-6 pb-2 lg:my-4 orange border-b border-b-red-500'>
@@ -61,6 +83,25 @@ export default async function SlugPage ({params}) {
                   />
                 </div>
         </div>
+        <div className='bg-gray-200 pl-24 py-12'>
+          
+          
+                  <h1 className='text-4xl font-bold text-red-800 mb-6'>Comments</h1>
+                  <CommentBox slug={params.slug}/>
+                  {
+                    thisBlogComments && thisBlogComments.reverse().map(({name,comment,updatedAt,_id})=>{
+                    const date = new Date (updatedAt).toISOString().split("T")[0]
+                  return <div key={_id} className='comment-card pl-5 py-5 my-10'>
+                    <p className='text-sm float-right text-gray-500 mr-10'>{date}</p>
+                    <h2 className='text-2xl font-bold text-red-900'>{name}</h2>
+                    <p>{comment}</p>
+                    
+                  </div>}
+                    )             
+                  }
+                  
+          </div>
+       </div>
 
         
 

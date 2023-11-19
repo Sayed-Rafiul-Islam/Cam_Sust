@@ -1,13 +1,14 @@
 import { createClient } from "next-sanity";
+const client = createClient({
+    projectId : process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset : "production",
+    apiVersion : "2023-11-05",
+    useCdn : true
+}) 
 
 export const getBlogs = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const blogs = await client.fetch(`*[_type == "blogs"]{
         _id,
@@ -28,12 +29,7 @@ export const getBlogs = async ()  => {
 
 export const getBlog = async (slug)  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const blogs = await client.fetch(`*[_type == "blogs" && slug.current == "${slug}" ][0]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -43,12 +39,7 @@ export const getBlog = async (slug)  => {
 
 export const getBooks = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const books = await client.fetch(`*[_type == "books"]{
         _id,
@@ -66,12 +57,7 @@ export const getBooks = async ()  => {
 
 export const getProducts = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const products = await client.fetch(`*[_type == "products"]{
         _id,
@@ -89,12 +75,7 @@ export const getProducts = async ()  => {
 
 export const getProduct = async (slug)  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const product = await client.fetch(`*[_type == "products" && slug.current == "${slug}" ][0]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -105,12 +86,7 @@ export const getProduct = async (slug)  => {
 
 export const getAboutUs = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const aboutUs = await client.fetch(`*[_type == "about"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -121,12 +97,7 @@ export const getAboutUs = async ()  => {
 
 export const getAdviers = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const advisers = await client.fetch(`*[_type == "advisers"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -136,12 +107,7 @@ export const getAdviers = async ()  => {
 
 export const getConstitution = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const constitution = await client.fetch(`*[_type == "constitution"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -151,12 +117,7 @@ export const getConstitution = async ()  => {
 
 export const getFaq = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const faq = await client.fetch(`*[_type == "faq"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -166,12 +127,7 @@ export const getFaq = async ()  => {
 
 export const getCamTalks = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const camTalks = await client.fetch(`*[_type == "camTalks"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -181,12 +137,7 @@ export const getCamTalks = async ()  => {
 
 export const getCounter = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const counter = await client.fetch(`*[_type == "counter"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -196,12 +147,7 @@ export const getCounter = async ()  => {
 
 export const getPeopleTalks = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const peopleTalks = await client.fetch(`*[_type == "peopleTalks"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -211,12 +157,7 @@ export const getPeopleTalks = async ()  => {
 
 export const getRegularActivities = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const regularActivities = await client.fetch(`*[_type == "regularActivities"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -226,12 +167,7 @@ export const getRegularActivities = async ()  => {
 
 export const getSchoolPrograms = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const schoolPrograms = await client.fetch(`*[_type == "schoolPrograms"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -241,12 +177,7 @@ export const getSchoolPrograms = async ()  => {
 
 export const getStudyCircles = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const studyCircles = await client.fetch(`*[_type == "studyCircles"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 
@@ -256,12 +187,7 @@ export const getStudyCircles = async ()  => {
 
 export const getCommittees = async ()  => {
 
-    const client = createClient({
-        projectId : "f89xy3cs",
-        dataset : "production",
-        apiVersion : "2023-11-05",
-        useCdn : true
-    })  
+     
 
     const committees = await client.fetch(`*[_type == "committees"]`,{cache : "no-store"} ,{next : {revalidate : 2}})
 

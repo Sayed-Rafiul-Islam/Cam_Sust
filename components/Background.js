@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import React, {useState, useEffect} from 'react';
 import NavLink from '@/components/NavLink';
-import "./modulue.background.css"
+import "./modulue.background.css"   
 
 const Background = ({children}) => {
 
@@ -137,9 +137,11 @@ const Background = ({children}) => {
                     }
                 </ul>
             </div>
+
             <div className={dashboardOn ? 'lg:ml-72 lg:pt-20' : ''}>
                 {children}
             </div>
+
         </div>
     );
 };

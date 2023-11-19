@@ -108,7 +108,6 @@
     font-weight: bold;
     transition-duration: .5s;
     transform: scale(1.1);
-    border-bottom: 20px solid orange;
 }
 
 .dashboard-button {
@@ -149,8 +148,6 @@
     font-weight: bold;
     transition-duration: .5s;
     transform: scale(1.1);
-    border-bottom: 20px solid orange;
-    /* background-image: linear-gradient(to top, orange, transparent,orange); */
 }
 
 

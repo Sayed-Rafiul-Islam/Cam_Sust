@@ -1,3 +1,4 @@
+"use client"
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
@@ -12,6 +13,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { AuthContextProvider } from './context/AuthContect'
 
 
      
@@ -19,15 +21,15 @@ import '@fontsource/roboto/700.css';
 
 export const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Cam Sust',
-  description: 'Astronomical website',
-}
+// export const metadata = {
+//   title: 'Cam Sust',
+//   description: 'Astronomical website',
+// }
 
 
 
 
-export default async function RootLayout({ children}) {
+export default function RootLayout({ children}) {
 
 
   return (
@@ -36,7 +38,7 @@ export default async function RootLayout({ children}) {
         <div className='body-wrapper mx-auto'>
 
 
-
+        <AuthContextProvider>
           {/* -------------------------------------------------------- */}
               {/* Header */}
           {/* -------------------------------------------------------- */}
@@ -78,7 +80,7 @@ export default async function RootLayout({ children}) {
               pauseOnHover
               theme="dark"
               />
-
+            </AuthContextProvider>
       
         </div> 
       </body>
