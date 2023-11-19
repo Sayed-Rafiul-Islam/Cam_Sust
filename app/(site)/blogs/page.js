@@ -34,7 +34,7 @@ function urlFor(source) {
         blogs.map((blog) => (
             <li key={blog._id}  className='overflow-hidden'>
                 <article className='lg:p-4 p-2 my-4 border border-red-500 blog-items'>
-                <Link  href={`/blogs/${blog.slug}`}>
+                <Link prefetch={false} href={`/blogs/${blog.slug}`}>
                     {blog.poster && (<div className='blog-items-img'><Image fill src={urlFor(blog.poster).url()} alt='cover-image'/></div>)}            
                 </Link>    
 
