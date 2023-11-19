@@ -23,7 +23,7 @@ function urlFor(source) {
 
 const getComments = async () => {
   try {
-    const res = await fetch(`http://localhost:3000/api/comments`,{cache : "no-store"})
+    const res = await fetch(`http://localhost:3000/api/comments`,{next : {revalidate : 2}})
     if (!res.ok) {
       throw new Error("faild to fetch comments")
     }
