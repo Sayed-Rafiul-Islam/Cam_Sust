@@ -4,6 +4,7 @@ import PortableText from 'react-portable-text';
 import './module.blog.css'
 import Image from 'next/image';
 import CommentBox from '@/components/CommentBox';
+import getComments from '@/utils/getComments';
 
 
 
@@ -21,17 +22,7 @@ function urlFor(source) {
   return builder.image(source)
 }
 
-const getComments = async () => {
-  try {
-    const res = await fetch(`http://localhost:3000/api/comments`,{next : {revalidate : 2}})
-    if (!res.ok) {
-      throw new Error("faild to fetch comments")
-    }
-    return res.json()
-  } catch (error){
-    console.log("error getting comments", error)
-  }
-}
+
 
 
 
