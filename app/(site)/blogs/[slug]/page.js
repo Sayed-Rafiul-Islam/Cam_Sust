@@ -46,8 +46,8 @@ export default async function SlugPage ({params}) {
 
 
     return (
-       <div>
-         <div className="blog-body mx-auto lg:px-20 lg:pt-20 lg:pb-12 px-2 py-6">
+       <div className='animate__animated animate__fadeInUp'>
+         <div className="blog-body mx-auto lg:px-20 lg:pt-20 lg:pb-12 px-2 py-6 ">
                 <h1 className="lg:text-6xl text-3xl font-bold text-center">{blog.title}</h1>
                <div className='cover mx-auto'><Image className='rounded-xl' fill src={urlFor(blog.poster).url()} alt='cover image' /></div>
                 <div className='flex lg:text-base text-xs justify-between lg:px-12 px-2 lg:pb-6 pb-2 lg:my-4 orange border-b border-b-red-500'>
