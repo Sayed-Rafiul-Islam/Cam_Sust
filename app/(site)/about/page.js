@@ -8,7 +8,7 @@ const About = async () => {
         <div className='aboutUs animate__animated animate__fadeInLeft text-center text-white pb-10'>
             <h1 className='text-5xl lg:pt-0 pt-12 lg:pl-0 pl-10 font-bold '>About Us</h1>    
             <PortableText className='lg:ml-20 ml-12 mt-8 w-5/6 text-justify'
-        projectId='f89xy3cs'
+        projectId={NEXT_PUBLIC_SANITY_PROJECT_ID}
         dataset='production'
         content={aboutUs[0].content}
         serializers={{

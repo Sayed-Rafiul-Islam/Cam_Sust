@@ -49,7 +49,7 @@ function urlFor(source) {
                         </a>
                         <div className='mx-auto text-justify text-gray-300 line-clamp-6'>
                             <PortableText
-                            projectId='f89xy3cs'
+                            projectId={NEXT_PUBLIC_SANITY_PROJECT_ID}
                             dataset='production'
                             content={blog.content}
                             serializers={{

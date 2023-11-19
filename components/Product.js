@@ -77,7 +77,7 @@ export default function Product({product}) {
         <h2 className='my-2 text-orange-400'><b>Price :</b> <span className='text-white'>{currency} {price}</span></h2>
         <p className='text-orange-400 font-bold'>Description :</p>
         <PortableText className='text-sm text-justify'
-        projectId='f89xy3cs'
+        projectId=NEXT_PUBLIC_SANITY_PROJECT_ID
         dataset='production'
         content={details}
         serializers={{
