@@ -37,6 +37,7 @@ const getComments = async () => {
 
 
 export default async function SlugPage ({params}) {
+  
 
     const blog = await getBlog(params.slug)
     const {comments} = await getComments()
