@@ -2,7 +2,7 @@ import React from 'react'
 
 export default async function getComments() {
     try {
-        const res = await fetch(`http://localhost:3000/api/comments`)
+        const res = await fetch(`https://cam-sust.vercel.app/api/comments`)
         if (!res.ok) {
           throw new Error("faild to fetch comments")
         }
