@@ -13,7 +13,7 @@ const NavLink = ({children, href, exact=false, activeClassName, ...props}) => {
         props.className = classes
     }
     return (
-        <Link href={href} {...props} prefetch>
+        <Link href={href} {...props} prefetch as={href}>
             {children}
         </Link>
     );
