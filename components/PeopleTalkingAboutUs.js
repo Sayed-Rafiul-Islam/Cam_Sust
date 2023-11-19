@@ -37,7 +37,7 @@ const PeopleTalkingAboutUs = async () => {
                     </div>
                     <div className='lg:ml-20 ml-0'>
                     <PortableText className='text-gray-200 text-justify'
-                            projectId=NEXT_PUBLIC_SANITY_PROJECT_ID
+                            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                             dataset='production'
                             content={peopleTalk.words}
                             serializers={{

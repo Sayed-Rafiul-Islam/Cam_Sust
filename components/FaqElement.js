@@ -28,7 +28,7 @@ export default function FaqElement({faq}) {
             <AccordionDetails>
             
               <PortableText
-                  projectId=NEXT_PUBLIC_SANITY_PROJECT_ID
+                  projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                   dataset='production'
                   content={answer}
                   serializers={{

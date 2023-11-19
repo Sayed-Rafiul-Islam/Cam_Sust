@@ -59,7 +59,7 @@ export default async function SlugPage ({params}) {
 
                 <div className='mx-auto text-justify text-gray-200 content lg:mt-12 mt-6'>
                   <PortableText
-                  projectId={NEXT_PUBLIC_SANITY_PROJECT_ID}
+                  projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                   dataset='production'
                   content={blog.content}
                   serializers={{

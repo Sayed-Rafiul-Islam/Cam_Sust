@@ -13,7 +13,7 @@ const Talks = ({titleColored,titleUnColored,subtitle,details,additionalWords,url
                 details && 
                 <PortableText
                   className='text-justify my-2 font-light'
-                  projectId=NEXT_PUBLIC_SANITY_PROJECT_ID
+                  projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                   dataset='production'
                   content={details}
                   serializers={{
@@ -41,7 +41,7 @@ const Talks = ({titleColored,titleUnColored,subtitle,details,additionalWords,url
                 additionalWords && 
                 <PortableText
                   className='text-justify my-2 font-light'
-                  projectId=NEXT_PUBLIC_SANITY_PROJECT_ID
+                  projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                   dataset='production'
                   content={additionalWords}
                   serializers={{

@@ -25,7 +25,7 @@ export default function ConstitutionElement({constitution}) {
             <AccordionDetails >
               <PortableText
            
-                  projectId=NEXT_PUBLIC_SANITY_PROJECT_ID
+                  projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                   dataset='production'
                   content={section}
                   serializers={{

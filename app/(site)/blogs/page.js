@@ -34,12 +34,12 @@ function urlFor(source) {
         blogs.map((blog) => (
             <li key={blog._id}  className='overflow-hidden'>
                 <article className='lg:p-4 p-2 my-4 border border-red-500 blog-items'>
-                <Link prefetch as="fetch" href={`/blogs/${blog.slug}`}>
+                <Link  href={`/blogs/${blog.slug}`}>
                     {blog.poster && (<div className='blog-items-img'><Image fill src={urlFor(blog.poster).url()} alt='cover-image'/></div>)}            
                 </Link>    
 
                 <div className='lg:ml-6 lg:w-1/2 w-full lg:p-0 px-2'>
-                        <Link href={`/blogs/${blog.slug}`} prefetch as="fetch">
+                        <Link href={`/blogs/${blog.slug}`} >
                                 <h3 className='text-3xl lg:text-left text-center orange font-bold text-white'>
                                     {blog.title}
                                 </h3>
@@ -49,7 +49,7 @@ function urlFor(source) {
                         </Link>
                         <div className='mx-auto text-justify text-gray-300 line-clamp-6'>
                             <PortableText
-                            projectId={NEXT_PUBLIC_SANITY_PROJECT_ID}
+                            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                             dataset='production'
                             content={blog.content}
                             serializers={{
