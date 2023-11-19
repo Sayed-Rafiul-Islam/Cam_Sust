@@ -39,7 +39,7 @@ function urlFor(source) {
                 </Link>    
 
                 <div className='lg:ml-6 lg:w-1/2 w-full lg:p-0 px-2'>
-                        <Link href={`/blogs/${blog.slug}`} >
+                        <Link prefetch={false} href={`/blogs/${blog.slug}`} >
                                 <h3 className='text-3xl lg:text-left text-center orange font-bold text-white'>
                                     {blog.title}
                                 </h3>
