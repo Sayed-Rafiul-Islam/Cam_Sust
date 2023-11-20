@@ -5,3 +5,28 @@
     border-radius: 5px;
     box-shadow: 10px 10px 15px rgb(153, 153, 153);
 }
+.del-btn{
+    position: relative;
+    border-radius: 20px;
+    color: rgb(150, 0, 0);
+    transition-duration: .3s;
+    bottom: -30px;
+    right: -87px;
+}
+.del-btn:hover{
+    border-radius: 20px;
+    color: rgba(255, 0, 0, 0.678);
+    transition-duration: .3s;
+    transform: rotate(360deg) scale(1.2 );
+}
+
+@media (max-width: 576px) {
+    .comment-card{
+        margin-inline: auto;
+        border-left: 5px solid rgb(150, 0, 0);
+        background-image: linear-gradient(to right, rgba(150, 0, 0, 0.347), transparent);
+        width: 90%;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(153, 153, 153);
+    }
+  }

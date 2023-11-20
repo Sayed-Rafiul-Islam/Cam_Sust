@@ -23,14 +23,14 @@ export default function CommentBox(params) {
 
   return (
 
-    <div className=' my-5'>
+    <div className='my-5 lg:ml-0 ml-8'>
       {
         user ?
           <form onSubmit={commentHandler}>
               <TextField
               onChange={(e)=>setNewComment(e.target.value)}
               name='text'
-              className='w-96 mb-2'
+              className='lg:w-96 w-80 mb-2'
               id="standard-multiline-flexible"
               label="Write a Comment"
               multiline

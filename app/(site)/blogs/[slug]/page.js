@@ -81,8 +81,8 @@ export default async function SlugPage ({params}) {
                   />
                 </div>
         </div>
-        <div className='bg-gray-200 pl-24 py-12'>         
-                  <h1 className='text-4xl font-bold text-red-800 mb-6'>Comments</h1>
+        <div className='bg-gray-200 lg:pl-24 py-12'>         
+                  <h1 className='text-4xl font-bold text-red-800 mb-6 lg:text-left text-center'>Comments</h1>
                   <CommentBox slug={params.slug}/>
                   <Comments suppressHydrationWarning comments={comments} users={users}/>     
           </div>
