@@ -25,6 +25,6 @@ export async function GET(request) {
     const slug =  request.nextUrl.searchParams.get('slug')
     const filter = {slug : slug}
     await connectMongoDB()
-    const comments = await Comments.find(filter)
+    const comments = (await Comments.find(filter)).reverse()
     return NextResponse.json({comments}, { status : 200})
 }
