@@ -15,3 +15,9 @@ export async function PUT(request) {
         return NextResponse.json({messege : "already exists"}, { status : 200})
     }
 }
+
+export async function GET(request) {
+    await connectMongoDB()
+    const users = await Users.find()
+    return NextResponse.json({users}, { status : 200})   
+}

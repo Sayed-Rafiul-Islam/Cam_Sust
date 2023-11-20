@@ -13,29 +13,29 @@ export const AuthContextProvider = ({children}) => {
         const provider = new GoogleAuthProvider()
          signInWithPopup(auth,provider)
          
-
-         
-        
     }
 
     const logOut = () => {
         toast.error(`${user.displayName} signed out`)
         signOut(auth)   
+        localStorage.removeItem("email");
     }
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth,(currentUser)=> {
-            setUser(currentUser)
+            
             if (user && currentUser) {
-                toast.success(`${currentUser.displayName} signed in successfully`)
-                console.log(user)
+                toast.success(`${currentUser?.displayName} signed in successfully`)
                 const newUser = {
-                    email: currentUser.email,
-                    name : currentUser.displayName,
+                    email: currentUser?.email,
+                    name : currentUser?.displayName,
                     role : "user"
                 }
+                localStorage.setItem("email" , newUser.email)
                 createUser(newUser)
-            }            
+            }
+           
+            setUser(currentUser)            
         })
 
         return () => user && unsubscribe()

@@ -5,7 +5,6 @@ import './module.product.css'
 import { toast } from 'react-toastify'
 import imageUrlBuilder from '@sanity/image-url'
 import cartData from '@/utils/cartData'
-import Link from 'next/link'
 import Image from 'next/image'
 
 

@@ -16,7 +16,7 @@ export async function POST(request) {
 // }
 export async function DELETE(request) {
     await connectMongoDB()
-    const id = request.nextUrl.searchParams.get("id")
+    const id = request.nextUrl.searchParams.get("_id")
     await Comments.findByIdAndDelete(id)
     return NextResponse.json({messege : "Comment Deleted"}, {status : 200})
 }

@@ -5,6 +5,8 @@ import './module.blog.css'
 import Image from 'next/image';
 import CommentBox from '@/components/CommentBox';
 import getComments from '@/utils/getComments';
+import getUsers from '@/utils/getUsers';
+import Comments from '@/components/Comments';
 
 
 
@@ -29,9 +31,14 @@ function urlFor(source) {
 
 export default async function SlugPage ({params}) {
   
-
     const blog = await getBlog(params.slug)
     const {comments} = await getComments(params.slug)
+    const {users} = await getUsers()
+
+
+
+    
+
     
 
 
@@ -74,23 +81,10 @@ export default async function SlugPage ({params}) {
                   />
                 </div>
         </div>
-        <div className='bg-gray-200 pl-24 py-12'>
-          
-          
+        <div className='bg-gray-200 pl-24 py-12'>         
                   <h1 className='text-4xl font-bold text-red-800 mb-6'>Comments</h1>
                   <CommentBox slug={params.slug}/>
-                  {
-                    comments && comments.reverse().map(({name,comment,updatedAt,_id})=>{
-                    const date = new Date (updatedAt).toISOString().split("T")[0]
-                  return <div key={_id} className='comment-card pl-5 py-5 my-10'>
-                    <p className='text-sm float-right text-gray-500 mr-10'>{date}</p>
-                    <h2 className='text-2xl font-bold text-red-900'>{name}</h2>
-                    <p>{comment}</p>
-                    
-                  </div>}
-                    )             
-                  }
-                  
+                  <Comments suppressHydrationWarning comments={comments} users={users}/>     
           </div>
        </div>
 
