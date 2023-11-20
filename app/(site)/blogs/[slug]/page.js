@@ -31,8 +31,7 @@ export default async function SlugPage ({params}) {
   
 
     const blog = await getBlog(params.slug)
-    const {comments} = await getComments()
-    const thisBlogComments = comments.filter(comment => comment.slug === params.slug)
+    const {comments} = await getComments(params.slug)
     
 
 
@@ -81,7 +80,7 @@ export default async function SlugPage ({params}) {
                   <h1 className='text-4xl font-bold text-red-800 mb-6'>Comments</h1>
                   <CommentBox slug={params.slug}/>
                   {
-                    thisBlogComments && thisBlogComments.reverse().map(({name,comment,updatedAt,_id})=>{
+                    comments && comments.reverse().map(({name,comment,updatedAt,_id})=>{
                     const date = new Date (updatedAt).toISOString().split("T")[0]
                   return <div key={_id} className='comment-card pl-5 py-5 my-10'>
                     <p className='text-sm float-right text-gray-500 mr-10'>{date}</p>

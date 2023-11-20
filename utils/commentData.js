@@ -4,7 +4,7 @@ export default async function commentData(data) {
 
     const {name,comment,slug} = data
 
-    const res = await fetch('https://cam-sust.vercel.app/api/comments', {
+    const res = await fetch('http://localhost:3000/api/comments', {
         method : "POST",
         headers : {
             "Content-type" : "application/json"

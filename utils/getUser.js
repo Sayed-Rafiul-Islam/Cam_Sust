@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default async function getComments(slug) {
+export default async function getUser() {
     try {
-        const res = await fetch(`http://localhost:3000/api/comments?slug=${slug}`,{cache : "no-store"})
+        const res = await fetch(`http://localhost:3000/api/users/${email}`,{cache : "no-store"})
         if (!res.ok) {
           throw new Error("faild to fetch comments")
         }

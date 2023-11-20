@@ -3,32 +3,42 @@ import { useContext, createContext, useEffect, useState } from "react";
 import { signInWithPopup,signOut,onAuthStateChanged, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "@/firebase/clientApp";
 import { toast } from "react-toastify";
+import createUser from "@/utils/createUser";
 const AuthContext = createContext()
 
 export const AuthContextProvider = ({children}) => {
-    const [user,setUser] = useState('')
+    const [user,setUser] = useState(null)
 
-    const googleSignIn  = () => {
-
+    const googleSignIn  = async () => {
         const provider = new GoogleAuthProvider()
-        signInWithPopup(auth,provider)
-        user && toast.success(`${user?.displayName} signed in successfully`)
-       
+         signInWithPopup(auth,provider)
+         
+
+         
         
     }
 
     const logOut = () => {
         toast.error(`${user.displayName} signed out`)
-        signOut(auth)
-        
+        signOut(auth)   
     }
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth,(currentUser)=> {
             setUser(currentUser)
+            if (user && currentUser) {
+                toast.success(`${currentUser.displayName} signed in successfully`)
+                console.log(user)
+                const newUser = {
+                    email: currentUser.email,
+                    name : currentUser.displayName,
+                    role : "user"
+                }
+                createUser(newUser)
+            }            
         })
 
-        return () => unsubscribe()
+        return () => user && unsubscribe()
     },[user])
 
     return  (

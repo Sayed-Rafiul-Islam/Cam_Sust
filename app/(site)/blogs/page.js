@@ -5,6 +5,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import PortableText from 'react-portable-text'
 import Image from 'next/image'
 import Link from 'next/link'
+import getComments from '@/utils/getComments'
 
 
 const builder = imageUrlBuilder({
@@ -31,8 +32,10 @@ function urlFor(source) {
 
     <ul className=' lg:w-3/4 w-full mx-auto'>
         {
-        blogs.map((blog) => (
-            <li key={blog._id}  className='overflow-hidden'>
+        blogs.map(async (blog) => {
+            const {comments} = await getComments(blog.slug)
+
+        return <li key={blog._id}  className='overflow-hidden'>
                 <article className='lg:p-4 p-2 my-4 border border-red-500 blog-items'>
                 <Link prefetch href={`/blogs/${blog.slug}`}>
                     {blog.poster && (<div className='blog-items-img'><Image fill src={urlFor(blog.poster).url()} alt='cover-image'/></div>)}            
@@ -80,7 +83,7 @@ function urlFor(source) {
                             <div className='flex'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" strokeWidth="1.5" viewBox="0 0 24 24" color="#ffffff"><path stroke="#a8a5a5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M7.5 22a5.5 5.5 0 1 0-4.764-2.75l-.461 2.475 2.475-.46A5.474 5.474 0 0 0 7.5 22Z"></path><path stroke="#a8a5a5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M15.282 17.898A7.946 7.946 0 0 0 18 16.93l3.6.67-.67-3.6A8 8 0 1 0 6.083 8.849"></path></svg>
                                 <p className='ml-2 text-white'>
-                            22 Comments</p>
+                                {comments?.length} Comments</p>
                             </div>
                             <p className='text-white font-medium '>
                                 {new Date(blog._createdAt).toISOString().split("T")[0]}
@@ -93,7 +96,8 @@ function urlFor(source) {
                 </article>
 
             </li>
-        ))}
+            } )}
+       
     </ul>
    
 </div>
