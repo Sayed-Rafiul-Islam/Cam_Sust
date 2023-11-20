@@ -2,7 +2,7 @@ import React from 'react'
 
 export default async function getUser() {
     try {
-        const res = await fetch(`http://localhost:3000/api/users/${email}`,{cache : "no-store"})
+        const res = await fetch(`https://cam-sust.vercel.app/api/users/${email}`,{cache : "no-store"})
         if (!res.ok) {
           throw new Error("faild to fetch comments")
         }
