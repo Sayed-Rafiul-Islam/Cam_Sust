@@ -18,8 +18,8 @@ function urlFor(source) {
 
 export default async function BlogCards({blog}) {
 
-    const data = await getComments(blog.slug)
-    const comments = data?.comments;
+    const {comments} = await getComments(blog.slug)
+    // const comments = data?.comments;
 
   return (
     <div key={blog._id}  className='overflow-hidden'>
