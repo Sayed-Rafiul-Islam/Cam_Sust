@@ -37,11 +37,13 @@ export default function Cart() {
         setModal(false);
   }
   const confirmCart = (confirm) => {
+
     if(confirm) {
+
       setCartItems(tempCart)
       localStorage.setItem("cartItems", JSON.stringify(tempCart))
-      setCosts(costs-negCosts.price)
-      localStorage.setItem("costs", JSON.stringify(costs-negCosts.price))
+      setCosts(costs-(negCosts.price*negCosts.quantity))
+      localStorage.setItem("costs", JSON.stringify(costs-(negCosts.price*negCosts.quantity)))
       setModal(true)
       toast.error(`${negCosts.quantity} ${negCosts.name}${ negCosts.quantity > 1 ? 's' : ''} has been removed from the cart`)
     }
@@ -54,14 +56,18 @@ export default function Cart() {
     if (typeof window !== 'undefined') {
       const data = JSON.parse(localStorage.getItem('cartItems'))
       const cost = JSON.parse(localStorage.getItem('costs'))
+      setCosts(cost)
+      if (cost === 0) {
+        setDelivery(false)
+      }
       if (data) {
           setCartItems(data)
-          if (delivery){
-            setCosts(cost + 130)
-          }
-          else{
-            setCosts(cost)
-          }
+          // if (delivery){
+          //   setCosts(cost + 130)
+          // }
+          // else{
+          //   setCosts(cost)
+          // }
           
           
       }
@@ -88,7 +94,7 @@ export default function Cart() {
       </div>
       <div className="mt-24 overflow-hidden cart mx-auto flex lg:flex-row flex-col lg:pb-0 pb-10">
         {
-          cartItems ?
+          cartItems.length ?
           <div className='table-wrapper animate__animated animate__fadeInLeft'>
        <table className="table text-center text-white">
           <thead>
@@ -146,22 +152,32 @@ export default function Cart() {
               <h2 className='text-2xl mt-5 mb-10 text-white font-bold text-center'>Total Amount</h2>
               <div className='flex justify-between w-3/4 mx-auto mb-5'>
                 <p>Product Price :</p>
-                <p>{delivery ? costs-130 : costs}</p>
+                { cartItems.length ? 
+                <p>{costs}</p> : ''
+                }
               </div>
-              <div className='flex justify-between w-3/4 mx-auto pb-5'>
-                <p>Delivery Charge :</p>
-                <p>{delivery ? '130' : '0'}</p>
-              </div>
+                <div className='flex justify-between w-3/4 mx-auto pb-5'>
+                  <p>Delivery Charge :</p>
+                  <p>{delivery ? '130' : ''}</p>
+                </div>
               <div className='flex justify-between w-3/4 mx-auto pt-5 checkout-tot'>
                 <p>Total :</p>
-                <p>{costs}</p>
+                { cartItems.length ? 
+                <p>{delivery ? costs + 130 : costs}</p> : ''
+                }
+                
               </div>
-              <div className='w-3/4 mx-auto pt-5'>
-                <input onClick={()=> setDelivery(false)} name="delivery" value="false" className='mr-2' type="radio" />
-                <label >Pickup From Sust</label><br />
-                <input onClick={()=> setDelivery(true)} name="delivery" value="true" className='mr-2' type="radio" />
-                <label >Online Delivery</label><br />
-              </div>
+              { cartItems.length ? 
+                <div className='w-3/4 mx-auto pt-5'>
+                  <input onClick={()=> setDelivery(false)} name="delivery" value="false" className='mr-2' type="radio" />
+                  <label >Pickup From Sust</label><br />
+                  <input onClick={()=> setDelivery(true)} name="delivery" value="true" className='mr-2' type="radio" />
+                  <label >Online Delivery</label><br />
+                </div>
+                :
+                ''
+              }
+              
         </div>
       </div>
 
