@@ -5,7 +5,6 @@ import { getBlogs } from '@/sanity/sanity-utils'
 import BlogCards from '@/components/BlogCards'
 
 
-
  const Blogs = async () => {
 
 

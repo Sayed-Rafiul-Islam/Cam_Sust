@@ -2,6 +2,7 @@
 import React from 'react';
 import "./module.talk.css";
 import PortableText from 'react-portable-text';
+import lazyframe from "lazyframe";
 
 
 const Talks = ({titleColored,titleUnColored,subtitle,details,additionalWords,url}) => {
@@ -64,7 +65,7 @@ const Talks = ({titleColored,titleUnColored,subtitle,details,additionalWords,url
                   
                   
                   />    
-            }       
+            }
             <iframe className='video-player mt-4' src={url}></iframe>
             
         </div>
