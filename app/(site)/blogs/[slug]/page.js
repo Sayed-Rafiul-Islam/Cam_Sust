@@ -9,7 +9,7 @@ import getUsers from '@/utils/getUsers';
 import Comments from '@/components/Comments';
 
 const builder = imageUrlBuilder({
-  projectId : "f89xy3cs",
+  projectId : process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset : "production",
   apiVersion : "2023-11-05",
   useCdn : true

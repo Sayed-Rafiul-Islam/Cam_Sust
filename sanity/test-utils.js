@@ -5,7 +5,7 @@ import { createClient } from "next-sanity";
 export const getCounter = async ()  => {
 
   const client = createClient({
-    projectId : "f89xy3cs",
+    projectId : process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     dataset : "production",
     apiVersion : "2023-11-05",
     useCdn : true

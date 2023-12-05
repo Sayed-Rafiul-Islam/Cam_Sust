@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 
 const builder = imageUrlBuilder({
-  projectId : "f89xy3cs",
+  projectId : process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset : "production",
   apiVersion : "2023-11-05",
   useCdn : true
