@@ -8,11 +8,6 @@ import getComments from '@/utils/getComments';
 import getUsers from '@/utils/getUsers';
 import Comments from '@/components/Comments';
 
-
-
-
-
-
 const builder = imageUrlBuilder({
   projectId : "f89xy3cs",
   dataset : "production",
@@ -25,23 +20,11 @@ function urlFor(source) {
 }
 
 
-
-
-
-
 export default async function SlugPage ({params}) {
   
     const blog = await getBlog(params.slug)
     const {comments} = await getComments(params.slug)
     const {users} = await getUsers()
-
-
-
-    
-
-    
-
-
 
     return (
        <div className='animate__animated animate__fadeInUp'>
