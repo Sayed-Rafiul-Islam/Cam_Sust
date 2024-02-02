@@ -115,7 +115,7 @@
 }
 .table-wrapper {
     width: 70%;
-    overflow-x: scroll;
+
 }
 
 @media (max-width: 576px) {
