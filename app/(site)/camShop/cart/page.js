@@ -109,7 +109,7 @@ export default function Cart() {
               <td>
                 <div className="flex justify-center">
                     <div className="w-12 h-12 avatar rounded-full">
-                      <div className='product-image'>
+                      <div className='product-thumb'>
                           <Image fill className='rounded-full' src={urlFor(image).url()} alt="Avatar Tailwind CSS Component" />
                       </div>
                     </div>
