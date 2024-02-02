@@ -64,7 +64,7 @@ export default function RootLayout({ children}) {
               {/* Footer */}
             {/* -------------------------------------------------------- */}
 
-              <footer className='w-screen bg-black py-16 footer'>
+              <footer className='w-screen bg-black py-10 footer'>
                       <Footer/>
               </footer>
 

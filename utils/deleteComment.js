@@ -4,5 +4,4 @@ export default async function deleteComment(_id) {
     })
 
     console.log(_id)
-    
 }

@@ -4,7 +4,7 @@ import './module.footer.css'
 
 export default function Footer() {
   return (
-    <div className='lg:w-5/6 w-11/12 footer grid lg:grid-cols-4 grid-cols-2 lg:ml-48 ml-12 my-5'>
+    <div className='lg:w-5/6 w-11/12 footer grid lg:grid-cols-4 grid-cols-2 lg:ml-48 ml-12'>
         <div className='text-white lg:mb-0 mb-20'>
             <h2 className='mb-6'>What do we do?</h2>
             <Link prefetch as={'./activities/schoolPrograms'} href={'./activities/schoolPrograms'}>COSMANIA</Link><br/><br/>

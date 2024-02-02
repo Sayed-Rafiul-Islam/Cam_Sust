@@ -36,7 +36,7 @@
     border-radius: 20px;
     color: rgba(255, 0, 0, 0.678);
     transition-duration: .3s;
-    transform: rotate(360deg) scale(1.5 );
+    transform: rotate(360deg) scale(1.2 );
 }
 .modal-bg-on {
     background-color: rgba(0, 0, 0, 0.7);
@@ -99,7 +99,7 @@
     margin-right: 50px; 
 }
 .checkout-box {
-    top: 130px;
+    top: 90px;
     right: 50px;
     position: fixed;
     width: 25%;

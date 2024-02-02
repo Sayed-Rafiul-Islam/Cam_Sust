@@ -61,15 +61,7 @@ export default function Cart() {
         setDelivery(false)
       }
       if (data) {
-          setCartItems(data)
-          // if (delivery){
-          //   setCosts(cost + 130)
-          // }
-          // else{
-          //   setCosts(cost)
-          // }
-          
-          
+          setCartItems(data)       
       }
       else {
           setCartItems(data)
@@ -94,7 +86,7 @@ export default function Cart() {
       </div>
       <div className="mt-24 overflow-hidden cart mx-auto flex lg:flex-row flex-col lg:pb-0 pb-10">
         {
-          cartItems.length ?
+          cartItems ?
           <div className='table-wrapper animate__animated animate__fadeInLeft'>
        <table className="table text-center text-white">
           <thead>
@@ -152,7 +144,7 @@ export default function Cart() {
               <h2 className='text-2xl mt-5 mb-10 text-white font-bold text-center'>Total Amount</h2>
               <div className='flex justify-between w-3/4 mx-auto mb-5'>
                 <p>Product Price :</p>
-                { cartItems.length ? 
+                { cartItems ? 
                 <p>{costs}</p> : ''
                 }
               </div>
@@ -162,12 +154,12 @@ export default function Cart() {
                 </div>
               <div className='flex justify-between w-3/4 mx-auto pt-5 checkout-tot'>
                 <p>Total :</p>
-                { cartItems.length ? 
+                { cartItems ? 
                 <p>{delivery ? costs + 130 : costs}</p> : ''
                 }
                 
               </div>
-              { cartItems.length ? 
+              { cartItems ? 
                 <div className='w-3/4 mx-auto pt-5'>
                   <input onClick={()=> setDelivery(false)} name="delivery" value="false" className='mr-2' type="radio" />
                   <label >Pickup From Sust</label><br />
