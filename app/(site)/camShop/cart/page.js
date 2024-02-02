@@ -86,7 +86,7 @@ export default function Cart() {
       </div>
       <div className="mt-24 overflow-hidden cart mx-auto flex lg:flex-row flex-col lg:pb-0 pb-10">
         {
-          cartItems ?
+          cartItems.length !== 0 ?
           <div className='table-wrapper animate__animated animate__fadeInLeft'>
        <table className="table text-center text-white">
           <thead>
