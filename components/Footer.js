@@ -8,11 +8,11 @@ export default function Footer() {
         <div className='text-white lg:mb-0 mb-20'>
             <h2 className='mb-6'>What do we do?</h2>
             <Link prefetch as={'./activities/schoolPrograms'} href={'./activities/schoolPrograms'}>COSMANIA</Link><br/><br/>
-            <Link prefetch href={'./faq'}>FAQ</Link>
+            <Link prefetch href={'/faq'}>FAQ</Link>
         </div>
         <div className='text-white'>
             <h2 className='mb-6'>Resources</h2>
-            <Link as={'./constitution'}  href={'./constitution'}>Constitution</Link><br/><br/>
+            <Link as={'/constitution'}  href={'/constitution'}>Constitution</Link><br/><br/>
             <Link  href={''}>Cam Sust Logo</Link>
         </div>
         <div className='text-white'>
@@ -22,9 +22,9 @@ export default function Footer() {
         </div>
         <div className='text-white'>
             <h2 className='mb-6'>Follow Us</h2>
-            <Link prefetch as={'https://twitter.com/camsust'} href={'https://twitter.com/camsust'}>Twitter</Link><br/><br/>
-            <Link prefetch as={'https://www.facebook.com/camsust'} href={'https://www.facebook.com/camsust'}>Facebook</Link><br/><br/>
-            <Link prefetch as={'./https://www.youtube.com/channel/UCmSA2EgxJtl8GO6PiB-UGXw'} href={'./https://www.youtube.com/channel/UCmSA2EgxJtl8GO6PiB-UGXw'}>Youtube</Link>
+            <Link prefetch as={'https://twitter.com/camsust'} href={'https://twitter.com/camsust'} target='_black'>Twitter</Link><br/><br/>
+            <Link prefetch as={'https://www.facebook.com/camsust'} href={'https://www.facebook.com/camsust'} target='_black'>Facebook</Link><br/><br/>
+            <Link prefetch as={'https://www.youtube.com/channel/UCmSA2EgxJtl8GO6PiB-UGXw'} href={'https://www.youtube.com/channel/UCmSA2EgxJtl8GO6PiB-UGXw'} target='_black'>Youtube</Link>
         </div>
 
     </div>
